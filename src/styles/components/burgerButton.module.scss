@@ -1,0 +1,17 @@
+@use '../abstracts//variables.scss' as var;
+
+div {
+  .line {
+    height: 3px;
+    width: 18px;
+    background-color: var.$color-base;
+  }
+
+  .line:first-child {
+    margin-bottom: 3.5px;
+  }
+
+  .line:nth-child(2) {
+    margin-top: 3.5px;
+  }
+}
