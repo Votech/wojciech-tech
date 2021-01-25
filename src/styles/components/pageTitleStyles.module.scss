@@ -1,0 +1,16 @@
+@use '../abstracts/variables.scss' as var;
+
+.title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  h1 {
+    max-width: 740px;
+    font-size: 82px;
+    line-height: 88px;
+    color: var.$color-primary;
+  }
+  span {
+    color: var.$color-base;
+  }
+}

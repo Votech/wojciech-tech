@@ -8,7 +8,7 @@
       font-weight: bold;
       p {
         margin: 0;
-        margin-bottom: 6px;
+        padding-bottom: 6px;
       }
     }
 
@@ -28,13 +28,10 @@
       transition: transform 0.35s cubic-bezier(0.24, 0.28, 0.63, 1) 0s;
     }
 
-    a:hover:after {
+    a:hover:after,
+    .active:after {
       transform: scaleX(1);
       transform-origin: 0px 50%;
-    }
-
-    .activeNavItem:after {
-      content: "";
     }
   }
 }

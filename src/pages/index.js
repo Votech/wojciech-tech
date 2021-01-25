@@ -3,10 +3,13 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import pageTitle from "../components/pageTitle"
+import PageTitle from "../components/pageTitle"
 
 const IndexPage = () => {
   return (
     <Layout>
+      <PageTitle />
       <h1>Hello.</h1>
       <h2>I'm Wojciech, a web developer.</h2>
       <p>
