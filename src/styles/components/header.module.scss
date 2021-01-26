@@ -1,4 +1,5 @@
 @use '../abstracts/variables.scss' as var;
+@use '../abstracts//breakpoints.scss' as breakpoint;
 
 #header {
   align-items: center;
@@ -7,9 +8,23 @@
   width: 100%;
   height: 30px;
   margin: 50px 0;
-}
 
-#logo {
-  font-size: 24px;
-  font-weight: bold;
+  @include breakpoint.for_breakpoint(mobile) {
+    margin: 20px 0;
+  }
+
+  @include breakpoint.for_breakpoint(tablet) {
+    margin: 40px 0;
+  }
+
+  #logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .navbar {
+    @include breakpoint.for_breakpoint(mobile tablet) {
+      display: none;
+    }
+  }
 }

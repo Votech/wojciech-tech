@@ -1,9 +1,31 @@
 @use '../abstracts//variables.scss' as var;
+@use '../abstracts//breakpoints.scss' as breakpoint;
 
-div {
+.burgerButton {
+  display: none;
+  @include breakpoint.for_breakpoint(mobile tablet) {
+    display: inline;
+  }
+
   .line {
     height: 3px;
-    width: 18px;
+    width: 30px;
+    background-color: var.$color-base;
+  }
+
+  .line:first-child {
+    margin-bottom: 3.5px;
+  }
+
+  .line:nth-child(2) {
+    margin-top: 3.5px;
+  }
+}
+
+.burgerButtonSmall {
+  .line {
+    height: 3px;
+    width: 16px;
     background-color: var.$color-base;
   }
 

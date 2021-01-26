@@ -2,18 +2,14 @@ import React, { useState } from "react"
 
 import { Link } from "gatsby"
 
-import { useLocation } from "@reach/router"
-
 import navbarStyles from "../styles/components/navbar.module.scss"
 
-const Navbar = () => {
-  const location = useLocation()
+const Navbar = ({ className }) => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <nav>
+    <nav className={className}>
       <ul className={navbarStyles.list}>
-        {console.log(location.pathname)}
         <li>
           <Link
             to="/work"
@@ -21,14 +17,13 @@ const Navbar = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            {console.log(isHovered)}
             <p>Work</p>
           </Link>
         </li>
         <li>
           <Link
             to="/about"
-            activeClassName={navbarStyles.active}
+            activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -38,7 +33,7 @@ const Navbar = () => {
         <li>
           <Link
             to="/blog"
-            activeClassName={navbarStyles.active}
+            activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -48,7 +43,7 @@ const Navbar = () => {
         <li>
           <Link
             to="/contact"
-            activeClassName={navbarStyles.active}
+            activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >

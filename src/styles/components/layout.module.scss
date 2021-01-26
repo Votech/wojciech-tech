@@ -1,7 +1,17 @@
+@use '../abstracts//breakpoints.scss' as breakpoint;
+
 .container {
   display: flex;
   padding: 0 60px;
   height: 200vh;
+
+  @include breakpoint.for_breakpoint(mobile) {
+    padding: 0 20px;
+  }
+
+  @include breakpoint.for_breakpoint(tablet) {
+    padding: 0 40px;
+  }
 }
 
 .main {

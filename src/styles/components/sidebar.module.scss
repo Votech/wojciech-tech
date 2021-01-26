@@ -1,3 +1,5 @@
+@use '../abstracts//breakpoints.scss' as breakpoint;
+
 .sidebar {
   width: 60px;
   height: 100vh;
@@ -7,4 +9,12 @@
   position: fixed;
   left: 0;
   top: 0;
+
+  @include breakpoint.for_breakpoint(mobile) {
+    width: 20px;
+  }
+
+  @include breakpoint.for_breakpoint(tablet) {
+    width: 40px;
+  }
 }
