@@ -3,6 +3,8 @@
 
 .burgerButton {
   display: none;
+  cursor: pointer;
+  padding: 16px;
   @include breakpoint.for_breakpoint(mobile tablet) {
     display: inline;
   }
@@ -23,6 +25,9 @@
 }
 
 .burgerButtonSmall {
+  cursor: pointer;
+  padding: 0;
+
   .line {
     height: 3px;
     width: 16px;
@@ -31,9 +36,27 @@
 
   .line:first-child {
     margin-bottom: 3.5px;
+
+    transform-style: preserve-3d;
+    transition: transform 300ms ease 0s;
+    transform: translateY(0px) rotateZ(0deg);
   }
 
   .line:nth-child(2) {
     margin-top: 3.5px;
+
+    transform-style: preserve-3d;
+    transition: transform 300ms ease 0s;
+    transform: translateY(0px) rotateZ(0deg);
+  }
+
+  &.close {
+    .line:first-child {
+      transform: translateY(3.5px) rotateZ(45deg);
+    }
+
+    .line:nth-child(2) {
+      transform: translateY(-3.5px) rotateZ(-45deg);
+    }
   }
 }

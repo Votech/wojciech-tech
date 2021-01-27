@@ -2,15 +2,15 @@ import React from "react"
 
 import burgerButtonStyles from "../styles/components/burgerbutton.module.scss"
 
-const BurgerButton = ({ className, small }) => {
+const BurgerButton = ({ small, isSidebarOpen, ...otherProps }) => {
+  const burgerButtonStyle = small
+    ? burgerButtonStyles.burgerButtonSmall
+    : burgerButtonStyles.burgerButton
+
+  const close = isSidebarOpen ? burgerButtonStyles.close : null
+
   return (
-    <div
-      className={`${className} ${
-        small
-          ? burgerButtonStyles.burgerButtonSmall
-          : burgerButtonStyles.burgerButton
-      }`}
-    >
+    <div className={`${burgerButtonStyle} ${close}`}>
       <div className={burgerButtonStyles.line} />
       <div className={burgerButtonStyles.line} />
     </div>

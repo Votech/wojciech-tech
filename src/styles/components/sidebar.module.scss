@@ -9,6 +9,9 @@
   position: fixed;
   left: 0;
   top: 0;
+  cursor: pointer;
+  z-index: 300;
+  background-color: white;
 
   @include breakpoint.for_breakpoint(mobile) {
     width: 20px;
@@ -16,5 +19,28 @@
 
   @include breakpoint.for_breakpoint(tablet) {
     width: 40px;
+  }
+
+  .legend {
+    position: absolute;
+    left: 0px;
+    bottom: 15%;
+    width: 60px;
+
+    @include breakpoint.for_breakpoint(mobile) {
+      display: none;
+    }
+
+    @include breakpoint.for_breakpoint(tablet) {
+      width: 40px;
+    }
+
+    p {
+      white-space: nowrap;
+      transform: rotateZ(-90deg);
+      margin: 0;
+      letter-spacing: 1.6px;
+      font-size: 13px;
+    }
   }
 }

@@ -3,7 +3,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import pageTitle from "../components/pageTitle"
 import PageTitle from "../components/pageTitle"
 
 const IndexPage = () => {

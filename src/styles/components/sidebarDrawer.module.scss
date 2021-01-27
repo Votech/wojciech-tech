@@ -1,0 +1,79 @@
+@use '../abstracts/breakpoints.scss' as breakpoint;
+
+.sidebarDrawer {
+  position: fixed;
+  top: 0;
+  left: 60px;
+  height: 100vh;
+  background-color: white;
+  z-index: 100;
+  display: inline-flex;
+  padding-left: 8%;
+  padding-right: 2%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  will-change: transform;
+  transition: transform 350ms cubic-bezier(0.31, 0.08, 0.29, 1) 0s;
+
+  @include breakpoint.for_breakpoint(mobile) {
+    left: 20px;
+    padding-left: 10%;
+    width: 100%;
+  }
+
+  @include breakpoint.for_breakpoint(tablet) {
+    left: 40px;
+    width: 50%;
+  }
+
+  & > div {
+    margin-bottom: 40px;
+
+    @include breakpoint.for_breakpoint(mobile) {
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    letter-spacing: 1px;
+
+    .headline {
+      font-size: 40px;
+      font-weight: bold;
+      margin: 0;
+      line-height: 1.1;
+
+      @include breakpoint.for_breakpoint(desktop) {
+        font-size: 50px;
+      }
+    }
+
+    .description {
+      p {
+        font-size: 14px;
+        margin: 4px 0;
+
+        @include breakpoint.for_breakpoint(desktop) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  a.active {
+    .headline {
+      -webkit-text-stroke: 2px rgb(0, 0, 0);
+      color: transparent;
+    }
+  }
+}
+
+.sidebarDrawer.open {
+  transform: translateX(0px);
+}
+
+.sidebarDrawer.close {
+  transform: translateX(-100%);
+}

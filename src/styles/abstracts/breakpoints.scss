@@ -13,7 +13,7 @@ $media_queries: (
     ),
   "desktop":
     unquote(
-      $string: "only screen and (min-width: (#{$size__site_content_width} + 1))",
+      $string: "only screen and (min-width: 1025px)",
     ),
   "retina2":
     unquote(
