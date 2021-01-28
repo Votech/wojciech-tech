@@ -7,14 +7,17 @@ import BurgerButton from "./burgerButton"
 
 import headerStyles from "../styles/components/header.module.scss"
 
-const Header = () => {
+const Header = ({ isSidebarOpen, sidebarHandler }) => {
   return (
     <header id={headerStyles.header}>
       <Link id={headerStyles.logo} to="/">
         Wojciech Mietlinski
       </Link>
       <Navbar className={headerStyles.navbar} />
-      <BurgerButton />
+      <BurgerButton
+        onClick={() => sidebarHandler()}
+        isSidebarOpen={isSidebarOpen}
+      />
     </header>
   )
 }

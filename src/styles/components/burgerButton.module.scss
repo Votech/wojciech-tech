@@ -2,6 +2,8 @@
 @use '../abstracts//breakpoints.scss' as breakpoint;
 
 .burgerButton {
+  position: relative;
+  z-index: 300;
   display: none;
   cursor: pointer;
   padding: 16px;
@@ -17,10 +19,28 @@
 
   .line:first-child {
     margin-bottom: 3.5px;
+
+    transform-style: preserve-3d;
+    transition: transform 300ms ease 0s;
+    transform: translateY(0px) rotateZ(0deg);
   }
 
   .line:nth-child(2) {
     margin-top: 3.5px;
+
+    transform-style: preserve-3d;
+    transition: transform 300ms ease 0s;
+    transform: translateY(0px) rotateZ(0deg);
+  }
+
+  &.close {
+    .line:first-child {
+      transform: translateY(4px) rotateZ(45deg);
+    }
+
+    .line:nth-child(2) {
+      transform: translateY(-3px) rotateZ(-45deg);
+    }
   }
 }
 
@@ -35,15 +55,13 @@
   }
 
   .line:first-child {
-    margin-bottom: 3.5px;
-
     transform-style: preserve-3d;
     transition: transform 300ms ease 0s;
     transform: translateY(0px) rotateZ(0deg);
   }
 
   .line:nth-child(2) {
-    margin-top: 3.5px;
+    margin-top: 4px;
 
     transform-style: preserve-3d;
     transition: transform 300ms ease 0s;

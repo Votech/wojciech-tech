@@ -9,7 +9,7 @@
   z-index: 100;
   display: inline-flex;
   padding-left: 8%;
-  padding-right: 2%;
+  padding-right: 8%;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
@@ -24,7 +24,6 @@
 
   @include breakpoint.for_breakpoint(tablet) {
     left: 40px;
-    width: 50%;
   }
 
   & > div {

@@ -10,7 +10,7 @@ const BurgerButton = ({ small, isSidebarOpen, ...otherProps }) => {
   const close = isSidebarOpen ? burgerButtonStyles.close : null
 
   return (
-    <div className={`${burgerButtonStyle} ${close}`}>
+    <div className={`${burgerButtonStyle} ${close}`} {...otherProps}>
       <div className={burgerButtonStyles.line} />
       <div className={burgerButtonStyles.line} />
     </div>

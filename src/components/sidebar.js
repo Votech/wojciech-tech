@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 
 import { useLocation } from "@reach/router"
 
+import { RemoveScroll } from "react-remove-scroll"
+
 import BurgerButton from "../components/burgerButton"
 
 import sidebarStyles from "../styles/components/sidebar.module.scss"
@@ -29,6 +31,7 @@ const Sidebar = ({ isSidebarOpen, sidebarHandler }) => {
 
   return (
     <div className={sidebarStyles.sidebar} onClick={() => sidebarHandler()}>
+      {isSidebarOpen ? <RemoveScroll /> : null}
       <BurgerButton small isSidebarOpen={isSidebarOpen} />
       <div className={sidebarStyles.legend}>
         <p>{legend}</p>

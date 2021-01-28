@@ -1,14 +1,15 @@
 @use '../abstracts//breakpoints.scss' as breakpoint;
 
 .sidebar {
+  position: fixed;
   width: 60px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   left: 0;
   top: 0;
+  bottom: 0;
   cursor: pointer;
   z-index: 300;
   background-color: white;
@@ -28,7 +29,7 @@
     width: 60px;
 
     @include breakpoint.for_breakpoint(mobile) {
-      display: none;
+      width: 20px;
     }
 
     @include breakpoint.for_breakpoint(tablet) {
@@ -41,6 +42,11 @@
       margin: 0;
       letter-spacing: 1.6px;
       font-size: 13px;
+      font-weight: bold;
+
+      @include breakpoint.for_breakpoint(mobile) {
+        font-size: 11px;
+      }
     }
   }
 }

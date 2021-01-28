@@ -6,7 +6,7 @@ const PageTitle = () => {
   return (
     <section className={pageTitleStyles.title}>
       <h1>
-        Developer creating <span>digital</span> products
+        Developer creating <br /> <span>digital</span> products
       </h1>
     </section>
   )
