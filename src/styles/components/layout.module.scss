@@ -12,8 +12,8 @@
   @include breakpoint.for_breakpoint(tablet) {
     padding: 0 40px;
   }
-}
 
-.main {
-  width: 100%;
+  .main {
+    width: 100%;
+  }
 }

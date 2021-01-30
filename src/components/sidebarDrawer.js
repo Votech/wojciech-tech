@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { useLocation } from "@reach/router"
 
@@ -18,48 +19,78 @@ const SidebarDrawer = ({ isSidebarOpen }) => {
   return (
     <nav className={`${sidebarDrawerStyles.sidebarDrawer} ${sidebarOpen}`}>
       <Underline>
-        <Link to="/" activeClassName={sidebarDrawerStyles.active}>
+        <AniLink
+          to="/"
+          activeClassName={sidebarDrawerStyles.active}
+          cover
+          direction="up"
+          bg="#BBBBBB"
+        >
           <h1 className={`${sidebarDrawerStyles.headline}`}>Home</h1>
           <div className={`${sidebarDrawerStyles.description}`}>
             <p>{pathname === "/" ? "You are here" : "Back to basics"}</p>
           </div>
-        </Link>
+        </AniLink>
       </Underline>
 
       <Underline>
-        <Link to="/work" activeClassName={sidebarDrawerStyles.active}>
+        <AniLink
+          to="/work"
+          activeClassName={sidebarDrawerStyles.active}
+          cover
+          direction="up"
+          bg="#BBBBBB"
+        >
           <h1 className={`${sidebarDrawerStyles.headline}`}>Work</h1>
           <div className={`${sidebarDrawerStyles.description}`}>
             <p>{pathname === "/work" ? "You are here" : "My portfolio"}</p>
           </div>
-        </Link>
+        </AniLink>
       </Underline>
 
       <Underline>
-        <Link to="/about" activeClassName={sidebarDrawerStyles.active}>
+        <AniLink
+          to="/about"
+          activeClassName={sidebarDrawerStyles.active}
+          cover
+          direction="up"
+          bg="#BBBBBB"
+        >
           <h1 className={`${sidebarDrawerStyles.headline}`}>About</h1>
           <div className={`${sidebarDrawerStyles.description}`}>
             <p>{pathname === "/about" ? "You are here" : "Know me better"}</p>
           </div>
-        </Link>
+        </AniLink>
       </Underline>
 
       <Underline>
-        <Link to="/blog" activeClassName={sidebarDrawerStyles.active}>
+        <AniLink
+          to="/blog"
+          activeClassName={sidebarDrawerStyles.active}
+          cover
+          direction="up"
+          bg="#BBBBBB"
+        >
           <h1 className={`${sidebarDrawerStyles.headline}`}>Blog</h1>
           <div className={`${sidebarDrawerStyles.description}`}>
             <p>{pathname === "/blog" ? "You are here" : "My writing"}</p>
           </div>
-        </Link>
+        </AniLink>
       </Underline>
 
       <Underline>
-        <Link to="/contact" activeClassName={sidebarDrawerStyles.active}>
+        <AniLink
+          to="/contact"
+          activeClassName={sidebarDrawerStyles.active}
+          cover
+          direction="up"
+          bg="#BBBBBB"
+        >
           <h1 className={`${sidebarDrawerStyles.headline}`}>Contact</h1>
           <div className={`${sidebarDrawerStyles.description}`}>
             <p>{pathname === "/contact" ? "You are here" : "Let's connect"}</p>
           </div>
-        </Link>
+        </AniLink>
       </Underline>
     </nav>
   )

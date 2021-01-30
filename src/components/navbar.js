@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import navbarStyles from "../styles/components/navbar.module.scss"
 
@@ -11,44 +11,56 @@ const Navbar = ({ className }) => {
     <nav className={className}>
       <ul className={navbarStyles.list}>
         <li>
-          <Link
+          <AniLink
+            cover
+            direction="up"
+            bg="#BBBBBB"
             to="/work"
             activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             <p>Work</p>
-          </Link>
+          </AniLink>
         </li>
         <li>
-          <Link
+          <AniLink
+            cover
+            direction="up"
+            bg="#BBBBBB"
             to="/about"
             activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             <p>About</p>
-          </Link>
+          </AniLink>
         </li>
         <li>
-          <Link
+          <AniLink
+            cover
+            direction="up"
+            bg="#BBBBBB"
             to="/blog"
             activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             <p>Blog</p>
-          </Link>
+          </AniLink>
         </li>
         <li>
-          <Link
+          <AniLink
+            cover
+            direction="up"
+            bg="#BBBBBB"
             to="/contact"
             activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             <p>Contact</p>
-          </Link>
+          </AniLink>
         </li>
       </ul>
     </nav>

@@ -27,7 +27,7 @@ const Sidebar = ({ isSidebarOpen, sidebarHandler }) => {
     } else if (pathname === "/contact") {
       setLegend("CONTACT")
     }
-  })
+  }, [isSidebarOpen, pathname])
 
   return (
     <div className={sidebarStyles.sidebar} onClick={() => sidebarHandler()}>
