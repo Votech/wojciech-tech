@@ -8,7 +8,6 @@ import SidebarDrawer from "../components/sidebarDrawer"
 
 import "../styles/pages/index.scss"
 import layoutStyles from "../styles/components/layout.module.scss"
-
 const Layout = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false)
 

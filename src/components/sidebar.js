@@ -17,15 +17,15 @@ const Sidebar = ({ isSidebarOpen, sidebarHandler }) => {
     if (isSidebarOpen === true) {
       setLegend("CLICK TO CLOSE")
     } else if (pathname === "/") {
-      setLegend(">  HELLO WORLD")
+      setTimeout(() => setLegend(">  HELLO WORLD"), 100)
     } else if (pathname === "/work") {
-      setLegend("MY WORK")
+      setTimeout(() => setLegend("MY WORK"), 100)
     } else if (pathname === "/about") {
-      setLegend("ABOUT ME")
+      setTimeout(() => setLegend("ABOUT ME"), 100)
     } else if (pathname === "/blog") {
-      setLegend("BLOG")
+      setTimeout(() => setLegend("BLOG"), 100)
     } else if (pathname === "/contact") {
-      setLegend("CONTACT")
+      setTimeout(() => setLegend("CONTACT"), 100)
     }
   }, [isSidebarOpen, pathname])
 
