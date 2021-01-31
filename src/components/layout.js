@@ -22,7 +22,10 @@ const Layout = ({ children }) => {
         isSidebarOpen={isSidebarOpen}
         sidebarHandler={() => sidebarHandler()}
       />
-      <SidebarDrawer isSidebarOpen={isSidebarOpen} />
+      <SidebarDrawer
+        isSidebarOpen={isSidebarOpen}
+        sidebarHandler={() => sidebarHandler()}
+      />
 
       <div className={layoutStyles.main}>
         <Header
