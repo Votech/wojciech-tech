@@ -1,8 +1,18 @@
 import React from "react"
 
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import cardStyles from "../styles/components/card.module.scss"
 
-const Card = ({ primary, backgroundImageSrc, secondary, title1, title2 }) => {
+const Card = ({
+  primary,
+  backgroundImageSrc,
+  secondary,
+  title1,
+  title2,
+  to,
+}) => {
+  // setting the style of component
   let backgroundColor = "#f5f5f5"
   let textColor = "#222222"
 
@@ -15,7 +25,11 @@ const Card = ({ primary, backgroundImageSrc, secondary, title1, title2 }) => {
   }
 
   return (
-    <a
+    <AniLink
+      cover
+      direction="up"
+      bg="#BBBBBB"
+      to={to}
       className={cardStyles.container}
       style={{
         backgroundColor: `${backgroundColor}`,
@@ -23,6 +37,7 @@ const Card = ({ primary, backgroundImageSrc, secondary, title1, title2 }) => {
       }}
     >
       <h2 className={cardStyles.headline1} style={{ color: `${textColor}` }}>
+        {/* function below creats new line every "\n"  */}
         {title1.split("\n").map((item, key) => {
           return (
             <span key={key}>
@@ -35,7 +50,7 @@ const Card = ({ primary, backgroundImageSrc, secondary, title1, title2 }) => {
       <h3 className={cardStyles.headline2} style={{ color: `${textColor}` }}>
         {title2}
       </h3>
-    </a>
+    </AniLink>
   )
 }
 

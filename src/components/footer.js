@@ -20,7 +20,11 @@ const Footer = () => {
           <div className={footerStyles.right}>
             <div className={footerStyles.link}>
               <Underline>
-                <a href="mailto: mietlinski.wojtek@gmail.com" target="_blank">
+                <a
+                  href="mailto: mietlinski.wojtek@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Email
                 </a>
               </Underline>
@@ -31,6 +35,7 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/in/wojciech-mietlinski-a2b8a81ab/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   LinkedIn
                 </a>
@@ -39,7 +44,11 @@ const Footer = () => {
 
             <div className={footerStyles.link}>
               <Underline>
-                <a href="https://github.com/Votech" target="_blank">
+                <a
+                  href="https://github.com/Votech"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   GitHub
                 </a>
               </Underline>
