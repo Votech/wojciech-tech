@@ -1,0 +1,84 @@
+@use '../abstracts//breakpoints.scss' as breakpoint;
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  height: 700px;
+  margin: 30px;
+  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-position: 440px 100%;
+  background-size: 840px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: transform 200ms ease 0s;
+  transform: scaleX(1) scaleY(1);
+
+  &:hover {
+    transform: scaleX(0.95) scaleY(0.95);
+
+    .headline1 {
+      transform: translateX(20px) translateY(20px);
+    }
+
+    .headline2 {
+      transform: translateX(20px) translateY(-20px);
+    }
+  }
+  @include breakpoint.for_breakpoint(mobile) {
+    background-position: 50% 100%;
+    background-size: 370px;
+    height: 470px;
+    padding: 40px 10px;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin: 10px 0;
+    padding: 20px;
+  }
+
+  @include breakpoint.for_breakpoint(tablet) {
+    height: 420px;
+    background-size: auto 420px;
+    padding: 40px 50px;
+    margin: 20px 0;
+  }
+
+  .headline1 {
+    font-size: 70px;
+    line-height: 70px;
+    transform-style: preserve-3d;
+    transition: transform 200ms ease 0s;
+    transform: translateX(0px) translateY(0px);
+    margin: 0;
+
+    @include breakpoint.for_breakpoint(tablet) {
+      font-size: 50px;
+    }
+
+    @include breakpoint.for_breakpoint(mobile) {
+      line-height: 35px;
+      font-size: 35px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .headline2 {
+    font-size: 35px;
+    transform-style: preserve-3d;
+    transition: transform 200ms ease 0s;
+    transform: translateX(0px) translateY(0px) translateZ(0px);
+    margin: 0;
+
+    @include breakpoint.for_breakpoint(tablet) {
+      font-size: 30px;
+    }
+
+    @include breakpoint.for_breakpoint(mobile) {
+      font-size: 25px;
+    }
+  }
+}
