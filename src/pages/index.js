@@ -9,6 +9,7 @@ import indexStyles from "../styles/pages/index.module.scss"
 
 import facebookMacBook from "../assets/images/facebook_macbook.png"
 import foodieIphone from "../assets/images/iphone_foodie.png"
+import profilePhoto from "../assets/images/profile_photo_transparent.png"
 
 const IndexPage = () => {
   return (
@@ -23,12 +24,12 @@ const IndexPage = () => {
           to="/about"
           title1={`Nice to \nmeet you `}
           title2={`About me`}
-          backgroundImageSrc="https://uploads-ssl.webflow.com/5fe8ce03305f8608daeabeb2/6009ebff34c834d91241413a_photo-home%402x.png"
+          imgSrc={profilePhoto}
         />
-        <Quote
-          grayText="By designing accessible interfaces, I make digital products"
-          blackText=" usable for everyone."
-        />
+        <Quote>
+          By designing accessible interfaces, I make digital products
+          <span> usable for everyone.</span>
+        </Quote>
         <Card
           primary
           title1={`Social web app \nlike a facebook`}
@@ -47,11 +48,10 @@ const IndexPage = () => {
           title2={`Cooking portal`}
           backgroundImageSrc={foodieIphone}
         />
-        <Quote
-          grayText="Occasionally I write design related insights to help designers"
-          blackText=" improve their skills."
-          maxWidth="720px"
-        />
+        <Quote maxWidth="720px">
+          <span> Occasionally I write</span> design related insights to help
+          designers improve thier skills
+        </Quote>
       </section>
     </Layout>
   )

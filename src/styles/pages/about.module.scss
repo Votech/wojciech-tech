@@ -1,0 +1,55 @@
+@use '../abstracts/breakpoints.scss' as breakpoint;
+@use '../abstracts//variables.scss' as var;
+
+.container {
+  max-width: 700px;
+
+  .image_wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(248, 247, 255);
+    margin-bottom: 100px;
+    box-sizing: border-box;
+
+    .image {
+      width: 400px;
+      position: relative;
+      right: 0;
+      bottom: 0;
+      filter: drop-shadow(0 0 0.75rem #161616);
+      filter: drop-shadow(0 0 1.25rem #838383);
+
+      @include breakpoint.for_breakpoint(mobile) {
+        width: 90%;
+      }
+    }
+
+    .headline {
+      position: absolute;
+      left: 10px;
+      bottom: 90px;
+      margin: 0;
+      font-size: 150px;
+      color: var.$color-primary;
+
+      @include breakpoint.for_breakpoint(mobile) {
+        font-size: 100px;
+        bottom: -105px;
+      }
+    }
+  }
+
+  .story {
+    margin-bottom: 0;
+    font-size: 25px;
+    line-height: 40px;
+
+    @include breakpoint.for_breakpoint(mobile) {
+      font-size: 18px;
+      line-height: 30px;
+      margin-top: 150px;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import cardStyles from "../styles/components/card.module.scss"
 const Card = ({
   primary,
   backgroundImageSrc,
+  imgSrc,
   secondary,
   title1,
   title2,
@@ -36,6 +37,13 @@ const Card = ({
         backgroundImage: `url(${backgroundImageSrc})`,
       }}
     >
+      {imgSrc && (
+        <img
+          src={imgSrc}
+          alt="Wojciech Mietlinski"
+          className={cardStyles.image}
+        />
+      )}
       <h2 className={cardStyles.headline1} style={{ color: `${textColor}` }}>
         {/* function below creats new line every "\n"  */}
         {title1.split("\n").map((item, key) => {
