@@ -2,14 +2,8 @@ import React from "react"
 
 import pageTitleStyles from "../styles/components/pageTitleStyles.module.scss"
 
-const PageTitle = () => {
-  return (
-    <section className={pageTitleStyles.title}>
-      <h1>
-        Developer creating <br /> <span>digital</span> products
-      </h1>
-    </section>
-  )
+const PageTitle = ({ children }) => {
+  return <section className={pageTitleStyles.title}>{children}</section>
 }
 
 export default PageTitle

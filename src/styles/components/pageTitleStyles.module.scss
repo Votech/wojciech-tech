@@ -1,27 +1,15 @@
 @use '../abstracts/variables.scss' as var;
-@use '../abstracts//breakpoints.scss' as breakpoint;
 
 .title {
   text-align: center;
   display: flex;
   justify-content: center;
+  padding: 70px 0 120px 0;
 
   h1 {
-    max-width: 1070px;
-    font-size: 90px;
-    line-height: 88px;
-    color: var.$color-primary;
-
-    @include breakpoint.for_breakpoint(tablet) {
-      font-size: 80px;
-      line-height: 85px;
-    }
-
-    @include breakpoint.for_breakpoint(mobile) {
-      font-size: 40px;
-      line-height: 48px;
-    }
+    margin: 0;
   }
+
   span {
     color: var.$color-base;
   }

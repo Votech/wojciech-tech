@@ -6,13 +6,18 @@ import Card from "../components/card"
 import Quote from "../components/quote"
 
 import indexStyles from "../styles/pages/index.module.scss"
+
 import facebookMacBook from "../assets/images/facebook_macbook.png"
 import foodieIphone from "../assets/images/iphone_foodie.png"
 
 const IndexPage = () => {
   return (
     <Layout>
-      <PageTitle />
+      <PageTitle>
+        <h1>
+          Developer creating <br /> <span>digital </span> solutions
+        </h1>
+      </PageTitle>
       <section className={indexStyles.body}>
         <Card
           to="/about"

@@ -1,4 +1,5 @@
 @use '../abstracts/breakpoints.scss' as breakpoint;
+@use '../abstracts//variables.scss' as var;
 
 .sidebarDrawer {
   position: fixed;
@@ -43,6 +44,7 @@
       font-weight: bold;
       margin: 0;
       line-height: 1.1;
+      color: var.$color-base;
 
       @include breakpoint.for_breakpoint(desktop) {
         font-size: 50px;
@@ -63,7 +65,7 @@
 
   a.active {
     .headline {
-      -webkit-text-stroke: 2px rgb(0, 0, 0);
+      -webkit-text-stroke: 2px var.$color-base;
       color: transparent;
     }
   }

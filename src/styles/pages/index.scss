@@ -1,6 +1,5 @@
-//main style
-
 @use '../abstracts/variables.scss' as var;
+@use '../abstracts//breakpoints.scss' as breakpoint;
 
 @font-face {
   font-family: "Gilroy";
@@ -58,4 +57,21 @@ video {
 a {
   text-decoration: none;
   color: var.$color-base;
+}
+
+h1 {
+  max-width: 1070px;
+  font-size: 90px;
+  line-height: 88px;
+  color: var.$color-primary;
+
+  @include breakpoint.for_breakpoint(tablet) {
+    font-size: 80px;
+    line-height: 85px;
+  }
+
+  @include breakpoint.for_breakpoint(mobile) {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
