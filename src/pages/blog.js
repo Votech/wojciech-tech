@@ -1,9 +1,30 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
 
 const BlogPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+              slug
+            }
+            html
+            excerpt
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(data)
+
   return (
     <Layout>
       <PageTitle maxWidth="660px">
@@ -12,8 +33,16 @@ const BlogPage = () => {
           about design
         </h1>
       </PageTitle>
-      <h1>Blog</h1>
-      <p>Posts will show up here later on.</p>
+      <ol>
+        {data.allMarkdownRemark.edges.map(edge => {
+          return (
+            <li>
+              <h2>{edge.node.frontmatter.title}</h2>
+              <p>{edge.node.frontmatter.date}</p>
+            </li>
+          )
+        })}
+      </ol>
     </Layout>
   )
 }
