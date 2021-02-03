@@ -8,6 +8,6 @@ React Perfect.
 
 ## Topics Covered
 
-1. Gatsby
-2. GraphQL
+1. React
+2. React
 3. React

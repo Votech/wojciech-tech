@@ -16,8 +16,9 @@ const AboutPage = () => {
           <span>About</span> me
         </h1>
       </PageTitle>
+
       <PageContainer>
-        <div className={aboutStyles.container}>
+        <div className={aboutStyles.header}>
           <div className={aboutStyles.image_wrapper}>
             <img
               className={aboutStyles.image}
@@ -26,7 +27,8 @@ const AboutPage = () => {
             />
             <h1 className={aboutStyles.headline}>Hello</h1>
           </div>
-
+        </div>
+        <div className={aboutStyles.container}>
           <p className={aboutStyles.story}>
             My name is Semih, and I’m a digital designer from the Netherlands. I
             am currently working at Amsterdam-based design agency Unc Inc

@@ -1,9 +1,11 @@
 @use '../abstracts/breakpoints.scss' as breakpoint;
 @use '../abstracts//variables.scss' as var;
 
-.container {
-  max-width: 700px;
-
+.header {
+  width: 980px;
+  @include breakpoint.for_breakpoint(mobile tablet) {
+    width: 100%;
+  }
   .image_wrapper {
     position: relative;
     width: 100%;
@@ -14,32 +16,51 @@
     box-sizing: border-box;
 
     .image {
-      width: 400px;
+      width: 480px;
+      padding-top: 10px;
       position: relative;
       right: 0;
       bottom: 0;
       filter: drop-shadow(0 0 0.75rem #161616);
       filter: drop-shadow(0 0 1.25rem #838383);
 
+      @include breakpoint.for_breakpoint(tablet) {
+        width: 400px;
+      }
+
       @include breakpoint.for_breakpoint(mobile) {
+        width: auto;
         width: 90%;
       }
     }
 
     .headline {
       position: absolute;
-      left: 10px;
+      left: 50px;
       bottom: 90px;
       margin: 0;
-      font-size: 150px;
+      font-size: 200px;
       color: var.$color-primary;
 
       @include breakpoint.for_breakpoint(mobile) {
         font-size: 100px;
-        bottom: -105px;
+        bottom: -125px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+      @include breakpoint.for_breakpoint(tablet) {
+        font-size: 150px;
+        left: 25px;
       }
     }
   }
+}
+
+.container {
+  max-width: 700px;
 
   .story {
     margin-bottom: 0;
@@ -49,7 +70,7 @@
     @include breakpoint.for_breakpoint(mobile) {
       font-size: 18px;
       line-height: 30px;
-      margin-top: 150px;
+      margin-top: 100px;
     }
   }
 }

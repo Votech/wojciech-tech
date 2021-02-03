@@ -1,0 +1,62 @@
+@use '../abstracts//variables.scss' as var;
+@use '../abstracts//breakpoints.scss' as breakpoint;
+
+.container {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+
+  &:hover {
+    .image {
+      transform: scale(0.95);
+    }
+
+    .info {
+      transform: translateY(-15px);
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+    background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/background-image.svg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    transition: transform 200ms ease 0s;
+    transform: scale(1);
+  }
+
+  .info {
+    transform-style: preserve-3d;
+    transition: transform 200ms ease 0s;
+    transform: translateY(0px);
+
+    .date {
+      margin: 0 0 30px 0;
+      color: var.$color-gray-text;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      .dot {
+        margin: 0 10px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .headline {
+      margin: 0;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}

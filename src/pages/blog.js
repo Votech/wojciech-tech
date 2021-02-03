@@ -1,8 +1,12 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
+import BlogCard from "../components/blogCard"
+import PageContainer from "../components/pageContainer"
+
+import blogStyles from "../styles/pages/blog.module.scss"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -13,17 +17,15 @@ const BlogPage = () => {
             frontmatter {
               title
               date
+            }
+            fields {
               slug
             }
-            html
-            excerpt
           }
         }
       }
     }
   `)
-
-  console.log(data)
 
   return (
     <Layout>
@@ -33,16 +35,44 @@ const BlogPage = () => {
           about design
         </h1>
       </PageTitle>
-      <ol>
-        {data.allMarkdownRemark.edges.map(edge => {
-          return (
-            <li>
-              <h2>{edge.node.frontmatter.title}</h2>
-              <p>{edge.node.frontmatter.date}</p>
-            </li>
-          )
-        })}
-      </ol>
+
+      <PageContainer>
+        <div className={blogStyles.grid}>
+          {data.allMarkdownRemark.edges.map((edge, index) => {
+            return (
+              <BlogCard
+                to={`/blog/${edge.node.fields.slug}`}
+                title={edge.node.frontmatter.title}
+                date={edge.node.frontmatter.date}
+              />
+            )
+          })}
+          <BlogCard
+            title="hello worldhello worldhello world"
+            date="12-12-2019"
+          />
+          <BlogCard
+            title="hello worldhello worldhello world"
+            date="12-12-2019"
+          />
+          <BlogCard
+            title="hello worldhello worldhello world"
+            date="12-12-2019"
+          />
+          <BlogCard
+            title="hello worldhello worldhello world"
+            date="12-12-2019"
+          />
+          <BlogCard
+            title="hello worldhello worldhello world"
+            date="12-12-2019"
+          />
+          <BlogCard
+            title="hello worldhello worldhello world"
+            date="12-12-2019"
+          />
+        </div>
+      </PageContainer>
     </Layout>
   )
 }
