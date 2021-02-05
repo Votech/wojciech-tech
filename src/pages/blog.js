@@ -11,16 +11,12 @@ import blogStyles from "../styles/pages/blog.module.scss"
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
-            frontmatter {
-              title
-              date
-            }
-            fields {
-              slug
-            }
+            title
+            slug
+            publishedDate(formatString: "MMM D, YYYY")
           }
         }
       }
@@ -38,39 +34,16 @@ const BlogPage = () => {
 
       <PageContainer>
         <div className={blogStyles.grid}>
-          {data.allMarkdownRemark.edges.map((edge, index) => {
+          {data.allContentfulBlogPost.edges.map((edge, index) => {
             return (
               <BlogCard
-                to={`/blog/${edge.node.fields.slug}`}
-                title={edge.node.frontmatter.title}
-                date={edge.node.frontmatter.date}
+                key={index}
+                to={`/blog/${edge.node.slug}`}
+                title={edge.node.title}
+                date={edge.node.publishedDate}
               />
             )
           })}
-          <BlogCard
-            title="hello worldhello worldhello world"
-            date="12-12-2019"
-          />
-          <BlogCard
-            title="hello worldhello worldhello world"
-            date="12-12-2019"
-          />
-          <BlogCard
-            title="hello worldhello worldhello world"
-            date="12-12-2019"
-          />
-          <BlogCard
-            title="hello worldhello worldhello world"
-            date="12-12-2019"
-          />
-          <BlogCard
-            title="hello worldhello worldhello world"
-            date="12-12-2019"
-          />
-          <BlogCard
-            title="hello worldhello worldhello world"
-            date="12-12-2019"
-          />
         </div>
       </PageContainer>
     </Layout>
