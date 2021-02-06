@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import blogCardStyles from "../styles/components/blogCard.module.scss"
 
-const BlogCard = ({ imgSrc, imgAlt, date, title, to }) => {
+const BlogCard = ({ imgSrc, imgAlt, readTime, date, title, to }) => {
   return (
     <div className={blogCardStyles.container}>
       <Link to={to}>
@@ -18,7 +18,8 @@ const BlogCard = ({ imgSrc, imgAlt, date, title, to }) => {
           <div className={blogCardStyles.date}>
             <p>
               {date}
-              <span className={blogCardStyles.dot}>•</span>4 min read
+              <span className={blogCardStyles.dot}>•</span>
+              {readTime} read
             </p>
           </div>
           <h2 className={blogCardStyles.headline}>{title}</h2>

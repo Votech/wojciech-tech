@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
@@ -17,6 +17,13 @@ const BlogPage = () => {
             title
             slug
             publishedDate(formatString: "MMM D, YYYY")
+            readTime
+            articleImage {
+              file {
+                url
+                fileName
+              }
+            }
           }
         }
       }
@@ -35,12 +42,26 @@ const BlogPage = () => {
       <PageContainer>
         <div className={blogStyles.grid}>
           {data.allContentfulBlogPost.edges.map((edge, index) => {
+            console.log(edge.node)
+
+            // destructing data from map above
+            const {
+              slug,
+              title,
+              publishedDate,
+              articleImage,
+              readTime,
+            } = edge.node
+
             return (
               <BlogCard
                 key={index}
-                to={`/blog/${edge.node.slug}`}
-                title={edge.node.title}
-                date={edge.node.publishedDate}
+                to={`/blog/${slug}`}
+                title={title}
+                date={publishedDate}
+                imgSrc={articleImage && articleImage.file.url}
+                imgAlt={articleImage && articleImage.file.fileName}
+                readTime={readTime}
               />
             )
           })}
