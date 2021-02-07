@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types"
 
+import blogStyles from "../styles/templates/blog.module.scss"
+
 import Layout from "../components/layout"
 import PageContainer from "../components/pageContainer"
 
@@ -15,7 +17,7 @@ export const query = graphql`
       articleLead
       readTime
       slug
-      publishedDate(formatString: "MMM D, YYYY")
+      publishedDate(formatString: "MMM D YYYY")
       articleImage {
         file {
           url
@@ -73,12 +75,23 @@ const Blog = props => {
   return (
     <Layout>
       <PageContainer>
-        <p>{`${publishedDate} ${readTime} read`}</p>
-        <h1>{title}</h1>
-        <h3>{articleLead}</h3>
-        <img src={url} alt={fileName} />
-        {documentToReactComponents(rawBlogPostObject, options)}
-        {console.log(url)}
+        <section className={blogStyles.header}>
+          <div className={blogStyles.wrapper}>
+            <div className={blogStyles.date}>
+              <p>{publishedDate}</p>
+              <p className={blogStyles.dot}>•</p>
+              <p>{`${readTime} read`}</p>
+            </div>
+            <h1 className={blogStyles.headline}>{title}</h1>
+            <h4 className={blogStyles.headline2}>{articleLead}</h4>
+          </div>
+        </section>
+        <section className={blogStyles.image}>
+          <img loading="lazy" src={url} alt={fileName} />
+        </section>
+        <section className={blogStyles.article}>
+          {documentToReactComponents(rawBlogPostObject, options)}
+        </section>
       </PageContainer>
     </Layout>
   )
