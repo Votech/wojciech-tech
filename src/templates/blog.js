@@ -8,6 +8,7 @@ import blogStyles from "../styles/templates/blog.module.scss"
 
 import Layout from "../components/layout"
 import PageContainer from "../components/pageContainer"
+import BlogLastThreePosts from "../components/blogLastThreePosts"
 
 export const query = graphql`
   query SingleContentFulBlogData($slug: String!) {
@@ -91,6 +92,10 @@ const Blog = props => {
         </section>
         <section className={blogStyles.article}>
           {documentToReactComponents(rawBlogPostObject, options)}
+        </section>
+        <section className={blogStyles.recommended}>
+          <h3 className={blogStyles.headline2}>Continue reading</h3>
+          <BlogLastThreePosts />
         </section>
       </PageContainer>
     </Layout>
