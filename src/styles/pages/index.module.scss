@@ -1,5 +1,19 @@
+@use '../abstracts/breakpoints.scss' as breakpoint;
+
 .body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .spacer {
+      @include breakpoint.for_breakpoint(mobile tablet) {
+        margin-bottom: 100px;
+      }
+    }
+  }
 }

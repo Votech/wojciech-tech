@@ -76,27 +76,29 @@ const Blog = props => {
   return (
     <Layout>
       <PageContainer>
-        <section className={blogStyles.header}>
-          <div className={blogStyles.wrapper}>
-            <div className={blogStyles.date}>
-              <p>{publishedDate}</p>
-              <p className={blogStyles.dot}>•</p>
-              <p>{`${readTime} read`}</p>
+        <article>
+          <header className={blogStyles.header}>
+            <div className={blogStyles.wrapper}>
+              <div className={blogStyles.date}>
+                <p>{publishedDate}</p>
+                <p className={blogStyles.dot}>•</p>
+                <p>{`${readTime} read`}</p>
+              </div>
+              <h1 className={blogStyles.headline}>{title}</h1>
+              <h4 className={blogStyles.headline2}>{articleLead}</h4>
             </div>
-            <h1 className={blogStyles.headline}>{title}</h1>
-            <h4 className={blogStyles.headline2}>{articleLead}</h4>
+          </header>
+          <div className={blogStyles.image}>
+            <img loading="lazy" src={url} alt={fileName} />
           </div>
-        </section>
-        <section className={blogStyles.image}>
-          <img loading="lazy" src={url} alt={fileName} />
-        </section>
-        <section className={blogStyles.article}>
-          {documentToReactComponents(rawBlogPostObject, options)}
-        </section>
-        <section className={blogStyles.recommended}>
-          <h3 className={blogStyles.headline2}>Continue reading</h3>
-          <BlogLastThreePosts />
-        </section>
+          <div className={blogStyles.main}>
+            {documentToReactComponents(rawBlogPostObject, options)}
+          </div>
+          <aside className={blogStyles.recommended}>
+            <h3 className={blogStyles.headline2}>Continue reading</h3>
+            <BlogLastThreePosts />
+          </aside>
+        </article>
       </PageContainer>
     </Layout>
   )

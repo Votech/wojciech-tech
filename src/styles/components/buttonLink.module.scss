@@ -1,0 +1,20 @@
+@use '../abstracts//variables.scss' as var;
+
+.container {
+  display: flex;
+  padding: 12px 20px;
+  flex-direction: row;
+  align-items: center;
+  background-color: var.$color-gray-background;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  cursor: pointer;
+
+  p {
+    padding: 12px 20px;
+  }
+}

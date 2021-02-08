@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 250px 100px;
+  padding: 250px 0;
 
   @include breakpoint.for_breakpoint(mobile tablet) {
     padding: 100px 0;
