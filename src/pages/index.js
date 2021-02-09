@@ -6,11 +6,10 @@ import Card from "../components/card"
 import Quote from "../components/quote"
 import BlogLastThreePosts from "../components/blogLastThreePosts"
 import ButtonLink from "../components/buttonLink"
+import ProjectsList from "../components/projectsList"
 
 import indexStyles from "../styles/pages/index.module.scss"
 
-import facebookMacBook from "../assets/images/facebook_macbook.png"
-import foodieIphone from "../assets/images/iphone_foodie.png"
 import profilePhoto from "../assets/images/profile_photo_transparent.png"
 
 const IndexPage = () => {
@@ -32,24 +31,7 @@ const IndexPage = () => {
           By designing accessible interfaces, I make digital products
           <span> usable for everyone.</span>
         </Quote>
-        <Card
-          primary
-          title1={`Social web app \nlike a facebook`}
-          title2={`Friend Book`}
-          backgroundImageSrc={facebookMacBook}
-        />
-        <Card
-          secondary
-          title1={`Crwn clothing`}
-          title2={`e-commerce`}
-          backgroundImageSrc="https://uploads-ssl.webflow.com/5fe8ce03305f8608daeabeb2/5fec78254df42885c7959010_hvc-app-hero%402x.png"
-        />
-        <Card
-          primary
-          title1={`Foodie`}
-          title2={`Cooking portal`}
-          backgroundImageSrc={foodieIphone}
-        />
+        <ProjectsList />
         <section>
           <Quote maxWidth="720px">
             <span> Occasionally I write</span> design related insights to help

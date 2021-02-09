@@ -54,6 +54,11 @@ const Blog = props => {
         return <img src={url} alt={title} />
       },
     },
+    renderText: text => {
+      return text.split("\n").reduce((children, textSegment, index) => {
+        return [...children, index > 0 && <br key={index} />, textSegment]
+      }, [])
+    },
   }
 
   // destructing from props.data
