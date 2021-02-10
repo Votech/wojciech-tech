@@ -29,10 +29,13 @@ const IndexPage = () => {
           title2={`About me`}
           imgSrc={profilePhoto}
         />
-        <Quote>
-          By designing accessible interfaces, I make digital products
-          <span> usable for everyone.</span>
-        </Quote>
+        <section>
+          <Quote>
+            By designing accessible interfaces, I make digital products
+            <span> usable for everyone.</span>
+          </Quote>
+        </section>
+
         <ProjectsList />
         <section>
           <Quote maxWidth="720px">
