@@ -5,7 +5,13 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Wojciech Mietlinski`,
+    Description: `Portfolio website and blog`,
+    author: `Wojciech Mietlinski`,
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-source-contentful",
       options: {

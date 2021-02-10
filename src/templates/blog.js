@@ -9,6 +9,7 @@ import blogStyles from "../styles/templates/blog.module.scss"
 import Layout from "../components/layout"
 import PageContainer from "../components/pageContainer"
 import BlogLastThreePosts from "../components/blogLastThreePosts"
+import Head from "../components/head"
 
 export const query = graphql`
   query SingleContentFulBlogData($slug: String!) {
@@ -80,6 +81,7 @@ const Blog = props => {
 
   return (
     <Layout>
+      <Head title={title} />
       <PageContainer>
         <article>
           <header className={blogStyles.header}>

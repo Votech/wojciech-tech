@@ -1,0 +1,59 @@
+@use '../abstracts/breakpoints.scss' as breakpoint;
+@use '../abstracts//variables.scss' as var;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 200px 0;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @include breakpoint.for_breakpoint(tablet) {
+    padding: 0 0 100px 0;
+  }
+  @include breakpoint.for_breakpoint(mobile) {
+    padding: 0;
+  }
+
+  .label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  .field {
+    height: 100%;
+    margin-bottom: 30px;
+    padding: 24px 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var.$color-gray-border;
+    border-radius: 0;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .error {
+    color: var.$color-red-text;
+    font-weight: bold;
+  }
+
+  .button {
+    background-color: var.$color-base;
+    color: var.$color-white;
+    display: flex;
+    padding: 24px 40px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: var.$color-gray-text;
+    }
+  }
+}

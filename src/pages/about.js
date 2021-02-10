@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
 import PageContainer from "../components/pageContainer"
+import Head from "../components/head"
 
 import aboutStyles from "../styles/pages/about.module.scss"
 
@@ -11,6 +12,7 @@ import profilePhoto from "../assets/images/profile_photo_transparent.png"
 const AboutPage = () => {
   return (
     <Layout>
+      <Head title="About" />
       <PageTitle>
         <h1>
           <span>About</span> me

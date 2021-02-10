@@ -7,6 +7,7 @@ import Quote from "../components/quote"
 import BlogLastThreePosts from "../components/blogLastThreePosts"
 import ButtonLink from "../components/buttonLink"
 import ProjectsList from "../components/projectsList"
+import Head from "../components/head"
 
 import indexStyles from "../styles/pages/index.module.scss"
 
@@ -15,6 +16,7 @@ import profilePhoto from "../assets/images/profile_photo_transparent.png"
 const IndexPage = () => {
   return (
     <Layout>
+      <Head title="Home" />
       <PageTitle>
         <h1>
           Developer creating <br /> <span>digital </span> solutions

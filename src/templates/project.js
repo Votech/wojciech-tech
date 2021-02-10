@@ -5,8 +5,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types"
 
 import Layout from "../components/layout"
-import PageContainer from "../components/pageContainer"
 import ButtonLink from "../components/buttonLink"
+import Head from "../components/head"
 
 import projectStyles from "../styles/templates/project.module.scss"
 
@@ -68,7 +68,6 @@ const Project = props => {
       title2,
       bgColor,
       titleColor,
-      publishedDate,
       image: {
         file: { url, fileName },
       },
@@ -81,6 +80,7 @@ const Project = props => {
 
   return (
     <Layout>
+      <Head title={title} />
       <article>
         <header
           className={projectStyles.header}

@@ -11,8 +11,8 @@
   justify-content: space-between;
   box-sizing: border-box;
   cursor: pointer;
-  background-position: 440px 50%;
-  background-size: 840px;
+  background-position: 430px -90px;
+  background-size: 1050px;
   background-repeat: no-repeat;
   text-decoration: none;
   transition: transform 200ms ease 0s;
@@ -42,8 +42,9 @@
   }
 
   @include breakpoint.for_breakpoint(tablet) {
+    background-position: 400px -30px;
     height: 420px;
-    background-size: auto 420px;
+    background-size: auto 430px;
     padding: 40px 50px;
     margin: 20px 0;
   }
