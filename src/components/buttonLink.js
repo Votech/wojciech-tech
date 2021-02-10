@@ -5,12 +5,12 @@ import Underline from "../components/underline"
 
 import buttonLinkStyles from "../styles/components/buttonLink.module.scss"
 
-const ButtonLink = ({ to }) => {
+const ButtonLink = ({ to, children }) => {
   return (
     <Link to={to}>
       <div className={buttonLinkStyles.container}>
         <Underline>
-          <p>Show all stories</p>
+          <p>{children}</p>
         </Underline>
       </div>
     </Link>

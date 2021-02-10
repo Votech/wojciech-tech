@@ -117,11 +117,25 @@ article {
 .recommended {
   padding: 200px 0 0 0;
 
+  @include breakpoint.for_breakpoint(tablet) {
+    padding: 150px 0 0 0;
+  }
+
+  @include breakpoint.for_breakpoint(mobile) {
+    padding: 100px 0 0 0;
+  }
+
   .headline2 {
+    margin-top: 0;
     margin-bottom: 100px;
     text-align: center;
     font-size: 50px;
     line-height: 55px;
     font-weight: bold;
+
+    @include breakpoint.for_breakpoint(mobile) {
+      font-size: 40px;
+      line-height: 45px;
+    }
   }
 }
