@@ -46,7 +46,7 @@ const IndexPage = () => {
         <section className={indexStyles.posts}>
           <BlogLastThreePosts />
           <div className={indexStyles.spacer} />
-          <ButtonLink to="/work">Show all stories</ButtonLink>
+          <ButtonLink to="/blog">Show all stories</ButtonLink>
         </section>
       </main>
     </Layout>

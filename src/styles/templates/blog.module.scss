@@ -12,6 +12,7 @@ article {
     .wrapper {
       max-width: 900px;
       text-align: center;
+      margin: 0 auto;
 
       .date {
         display: flex;
@@ -75,6 +76,9 @@ article {
   .main {
     max-width: 900px;
     padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include breakpoint.for_breakpoint(tablet) {
       padding: 50px;
