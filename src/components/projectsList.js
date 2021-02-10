@@ -36,8 +36,6 @@ const ProjectsList = () => {
       }}
     >
       {data.allContentfulProject.edges.map((edge, index) => {
-        console.log(edge.node)
-
         // destructing data from map above
         const { slug, title, title2, image } = edge.node
 

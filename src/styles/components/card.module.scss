@@ -54,9 +54,9 @@
     right: 100px;
     bottom: 0;
     width: 550px;
-    filter: drop-shadow(0 0 0.75rem rgb(22, 22, 22));
-    filter: drop-shadow(0 0 1.25rem rgb(131, 131, 131));
-    filter: grayscale(100%);
+    filter: drop-shadow(0 -0.1rem 0.1rem rgb(22, 22, 22))
+      drop-shadow(0 -0.2rem 0.2rem rgb(131, 131, 131)) grayscale(100%)
+      brightness(1.1);
 
     @include breakpoint.for_breakpoint(mobile) {
       width: 300px;
@@ -108,5 +108,11 @@
     @include breakpoint.for_breakpoint(mobile) {
       font-size: 25px;
     }
+  }
+}
+
+#profile {
+  @include breakpoint.for_breakpoint(mobile) {
+    height: 550px;
   }
 }

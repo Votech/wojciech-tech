@@ -11,7 +11,7 @@ import Head from "../components/head"
 
 import indexStyles from "../styles/pages/index.module.scss"
 
-import profilePhoto from "../assets/images/profile_photo_transparent.png"
+import profilePhoto from "../assets/images/profile_photo_transparent.jp2"
 
 const IndexPage = () => {
   return (
@@ -19,28 +19,29 @@ const IndexPage = () => {
       <Head title="Home" />
       <PageTitle>
         <h1>
-          Developer creating <br /> <span>digital </span> solutions
+          Developer creating <br /> <span>digital </span> products
         </h1>
       </PageTitle>
       <main className={indexStyles.body}>
         <Card
+          profile
           to="/about"
           title1={`Nice to \nmeet you `}
           title2={`About me`}
           imgSrc={profilePhoto}
         />
         <section>
-          <Quote>
-            By designing accessible interfaces, I make digital products
-            <span> usable for everyone.</span>
+          <Quote maxWidth="770px">
+            I am developer with deep passion for creating software for the web
+            <span> usable for everyone</span>.
           </Quote>
         </section>
 
         <ProjectsList />
         <section>
-          <Quote maxWidth="720px">
-            <span> Occasionally I write</span> design related insights to help
-            designers improve thier skills
+          <Quote maxWidth="770px">
+            <span> Occasionally I write</span> code related articles for other
+            people to help them improve their skills<span>.</span>
           </Quote>
         </section>
         <section className={indexStyles.posts}>

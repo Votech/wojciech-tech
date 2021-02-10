@@ -12,6 +12,7 @@ const Card = ({
   title1,
   title2,
   to,
+  profile,
 }) => {
   // setting the style of component
   let backgroundColor = "#f5f5f5"
@@ -32,6 +33,7 @@ const Card = ({
       bg="#BBBBBB"
       to={to}
       className={cardStyles.container}
+      id={profile && cardStyles.profile}
       style={{
         backgroundColor: `${backgroundColor}`,
         backgroundImage: `url(${backgroundImageSrc})`,
@@ -42,6 +44,7 @@ const Card = ({
           src={imgSrc}
           alt="Wojciech Mietlinski"
           className={cardStyles.image}
+          loading="lazy"
         />
       )}
       <h2 className={cardStyles.headline1} style={{ color: `${textColor}` }}>

@@ -29,8 +29,6 @@ const BlogList = () => {
   return (
     <BlogGrid>
       {data.allContentfulBlogPost.edges.map((edge, index) => {
-        console.log(edge.node)
-
         // destructing data from map above
         const { slug, title, publishedDate, articleImage, readTime } = edge.node
 
