@@ -1,9 +1,16 @@
 import React from "react"
-import { Formik, Form, Field, ErrorMessage } from "formik"
+import { Formik, Form, Field } from "formik"
 
 import contactFormStyles from "../styles/components/contactForm.module.scss"
 
 const contactForm = () => {
+  // function encode takes object of key: "value" pairs and turns it into query string
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
   return (
     <Formik
       initialValues={{
@@ -12,8 +19,19 @@ const contactForm = () => {
         message: "",
       }}
       onSubmit={(values, actions) => {
-        alert(JSON.stringify(values, null, 2))
-        actions.setSubmitting(false)
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact-demo", ...values }),
+        })
+          .then(() => {
+            alert("Success")
+            actions.resetForm()
+          })
+          .catch(() => {
+            alert("Error")
+          })
+          .finally(() => actions.setSubmitting(false))
       }}
       validate={values => {
         const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
@@ -31,7 +49,11 @@ const contactForm = () => {
       }}
     >
       {({ errors }) => (
-        <Form className={contactFormStyles.form}>
+        <Form
+          className={contactFormStyles.form}
+          name="contact-demo"
+          data-netlify={true}
+        >
           <label htmlFor="name" className={contactFormStyles.label}>
             Name:{" "}
           </label>
