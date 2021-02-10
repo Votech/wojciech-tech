@@ -52,7 +52,14 @@ const Project = props => {
           return id === imageID
         })
 
-        return <img src={url} alt={title} className={projectStyles.bodyImage} />
+        return (
+          <img
+            src={url}
+            alt={title}
+            className={projectStyles.bodyImage}
+            loading="lazy"
+          />
+        )
       },
     },
     renderText: text => {

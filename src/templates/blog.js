@@ -52,7 +52,7 @@ const Blog = props => {
           return id === imageID
         })
 
-        return <img src={url} alt={title} />
+        return <img src={url} alt={title} loading="lazy" />
       },
     },
     renderText: text => {
