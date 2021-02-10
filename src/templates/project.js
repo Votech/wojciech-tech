@@ -89,27 +89,29 @@ const Project = props => {
   return (
     <Layout>
       <Head title={title} />
-      <article className={projectStyles.article}>
-        <header
-          className={projectStyles.header}
-          style={{ backgroundColor: `${bgColor}` }}
-        >
-          <div
-            className={projectStyles.titles}
-            style={{ color: `${titleColor}` }}
+      <PageContainer>
+        <article>
+          <header
+            className={projectStyles.header}
+            style={{ backgroundColor: `${bgColor}` }}
           >
-            <h1 className={projectStyles.headline1}>{title2}</h1>
-            <h2 className={projectStyles.headline2}>{title}</h2>
-          </div>
-          <img src={url} alt={fileName} className={projectStyles.image} />
-        </header>
-        <section className={projectStyles.body}>
-          {documentToReactComponents(rawProjectObject, options)}
-        </section>
-        <footer className={projectStyles.footer}>
-          <ButtonLink to="/work">See more projects</ButtonLink>
-        </footer>
-      </article>
+            <div
+              className={projectStyles.titles}
+              style={{ color: `${titleColor}` }}
+            >
+              <h1 className={projectStyles.headline1}>{title2}</h1>
+              <h2 className={projectStyles.headline2}>{title}</h2>
+            </div>
+            <img src={url} alt={fileName} className={projectStyles.image} />
+          </header>
+          <section className={projectStyles.body}>
+            {documentToReactComponents(rawProjectObject, options)}
+          </section>
+          <footer className={projectStyles.footer}>
+            <ButtonLink to="/work">See more projects</ButtonLink>
+          </footer>
+        </article>
+      </PageContainer>
     </Layout>
   )
 }

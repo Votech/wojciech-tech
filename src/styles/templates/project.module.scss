@@ -1,12 +1,6 @@
 @use '../abstracts/variables.scss' as var;
 @use '../abstracts//breakpoints.scss' as breakpoint;
 
-.article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .header {
   display: flex;
   flex-direction: column;
