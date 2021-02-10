@@ -1,6 +1,6 @@
 import React from "react"
 
-import burgerButtonStyles from "../styles/components/burgerbutton.module.scss"
+import burgerButtonStyles from "../styles/components/burgerButton.module.scss"
 
 const BurgerButton = ({ small, isSidebarOpen, ...otherProps }) => {
   const burgerButtonStyle = small
