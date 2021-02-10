@@ -4,7 +4,7 @@ import { useLocation } from "@reach/router"
 
 import { RemoveScroll } from "react-remove-scroll"
 
-import BurgerButton from "../components/burgerButton"
+import BurgerButton from "./burgerButton"
 
 import sidebarStyles from "../styles/components/sidebar.module.scss"
 
