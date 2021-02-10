@@ -11,7 +11,7 @@ import Head from "../components/head"
 
 import indexStyles from "../styles/pages/index.module.scss"
 
-import profilePhoto from "../assets/images/profile_photo_transparent.jp2"
+import profilePhoto from "../assets/images/profile_photo_transparent.png"
 
 const IndexPage = () => {
   return (
