@@ -70,10 +70,13 @@
   }
 }
 
+.center {
+  margin: 0 auto;
+}
+
 .body {
   max-width: 900px;
   padding-bottom: 200px;
-  margin: 0 auto;
   @include breakpoint.for_breakpoint(tablet) {
     padding-bottom: 150px;
   }
