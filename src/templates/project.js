@@ -7,6 +7,7 @@ import { BLOCKS } from "@contentful/rich-text-types"
 import Layout from "../components/layout"
 import ButtonLink from "../components/buttonLink"
 import Head from "../components/head"
+import PageContainer from "../components/pageContainer"
 
 import projectStyles from "../styles/templates/project.module.scss"
 
@@ -88,7 +89,7 @@ const Project = props => {
   return (
     <Layout>
       <Head title={title} />
-      <article>
+      <article className={projectStyles.article}>
         <header
           className={projectStyles.header}
           style={{ backgroundColor: `${bgColor}` }}
