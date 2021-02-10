@@ -104,12 +104,14 @@ const Project = props => {
           <img src={url} alt={fileName} className={projectStyles.image} />
         </header>
         <div className={projectStyles.center}>
-          <section className={projectStyles.body}>
-            {documentToReactComponents(rawProjectObject, options)}
-          </section>
-          <footer className={projectStyles.footer}>
-            <ButtonLink to="/work">See more projects</ButtonLink>
-          </footer>
+          <div>
+            <section className={projectStyles.body}>
+              {documentToReactComponents(rawProjectObject, options)}
+            </section>
+            <footer className={projectStyles.footer}>
+              <ButtonLink to="/work">See more projects</ButtonLink>
+            </footer>
+          </div>
         </div>
       </article>
     </Layout>
