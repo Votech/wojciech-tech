@@ -76,9 +76,7 @@ article {
   .main {
     max-width: 900px;
     padding: 0 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
 
     @include breakpoint.for_breakpoint(tablet) {
       padding: 50px;
@@ -120,6 +118,9 @@ article {
 
 .recommended {
   padding: 200px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include breakpoint.for_breakpoint(tablet) {
     padding: 150px 0 0 0;
