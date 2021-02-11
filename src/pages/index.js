@@ -38,13 +38,11 @@ const IndexPage = ({ data }) => {
           <span> usable for everyone</span>.
         </Quote>
 
-        <ProjectsList />
-
         <Quote maxWidth='770px'>
           <span> Occasionally I write</span> code related articles for other
           people to help them improve their skills<span>.</span>
         </Quote>
-
+        <ProjectsList />
         <section className={indexStyles.posts}>
           <BlogLastThreePosts />
           <div className={indexStyles.spacer} />
