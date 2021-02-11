@@ -38,8 +38,8 @@ const ProjectsList = () => {
 
         return (
           <Card
-            primary={index % 2 === 0}
-            secondary={index % 2 === 1}
+            primary={index % 2 === 1}
+            secondary={index % 2 === 0}
             to={`/project/${slug}`}
             key={`${index}${slug}`}
             title1={title}

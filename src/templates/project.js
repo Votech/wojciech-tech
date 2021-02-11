@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { BLOCKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
 
-import Layout from "../components/layout"
-import ButtonLink from "../components/buttonLink"
-import Head from "../components/head"
+import Layout from '../components/layout';
+import ButtonLink from '../components/buttonLink';
+import Head from '../components/head';
 
-import projectStyles from "../styles/templates/project.module.scss"
+import projectStyles from '../styles/templates/project.module.scss';
 
 export const query = graphql`
   query SingleContentFulProjectData($slug: String!) {
@@ -38,36 +38,36 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-const Project = props => {
+const Project = (props) => {
   const options = {
     renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: node => {
-        const imageID = node.data.target.sys.id
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const imageID = node.data.target.sys.id;
         const {
           file: { url },
           title,
         } = references.find(({ contentful_id: id }) => {
-          return id === imageID
-        })
+          return id === imageID;
+        });
 
         return (
           <img
             src={url}
             alt={title}
             className={projectStyles.bodyImage}
-            loading="lazy"
+            loading='lazy'
           />
-        )
+        );
       },
     },
-    renderText: text => {
-      return text.split("\n").reduce((children, textSegment, index) => {
-        return [...children, index > 0 && <br key={index} />, textSegment]
-      }, [])
+    renderText: (text) => {
+      return text.split('\n').reduce((children, textSegment, index) => {
+        return [...children, index > 0 && <br key={index} />, textSegment];
+      }, []);
     },
-  }
+  };
 
   const {
     contentfulProject: {
@@ -80,10 +80,10 @@ const Project = props => {
       },
       body: { raw, references },
     },
-  } = props.data
+  } = props.data;
 
   // parsing the json  :
-  const rawProjectObject = JSON.parse(raw)
+  const rawProjectObject = JSON.parse(raw);
 
   return (
     <Layout>
@@ -108,13 +108,13 @@ const Project = props => {
               {documentToReactComponents(rawProjectObject, options)}
             </section>
             <footer className={projectStyles.footer}>
-              <ButtonLink to="/work">See more projects</ButtonLink>
+              <ButtonLink to='/work'>See more projects</ButtonLink>
             </footer>
           </div>
         </div>
       </article>
     </Layout>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;
