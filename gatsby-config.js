@@ -13,30 +13,29 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-source-contentful",
+      resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "src",
+        name: 'src',
         path: `${__dirname}/src/`,
       },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          "gatsby-remark-relative-images",
+          'gatsby-remark-relative-images',
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 750,
               linkImagesToOrginal: false,
@@ -45,5 +44,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-sass`,
   ],
-}
+};
