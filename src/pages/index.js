@@ -7,10 +7,11 @@ import indexStyles from '../styles/pages/index.module.scss';
 
 import Head from '../components/head';
 import PageTitle from '../components/pageTitle';
+import PageContainer from '../components/pageContainer';
 import Card from '../components/card';
 import Quote from '../components/quote';
-import PageContainer from '../components/pageContainer';
 import ProjectsList from '../components/projectsList';
+import Quote2 from '../components/quote2';
 import BlogLastThreePosts from '../components/blogLastThreePosts';
 import ButtonLink from '../components/buttonLink';
 import profilePhoto from '../assets/images/profile_photo_transparent.png';
@@ -37,12 +38,12 @@ const IndexPage = ({ data }) => {
           I am developer with deep passion for creating software for the web
           <span> usable for everyone</span>.
         </Quote>
-
-        <Quote maxWidth='770px'>
+        <ProjectsList />
+        <Quote2 maxWidth='770px'>
           <span> Occasionally I write</span> code related articles for other
           people to help them improve their skills<span>.</span>
-        </Quote>
-        <ProjectsList />
+        </Quote2>
+
         <section className={indexStyles.posts}>
           <BlogLastThreePosts />
           <div className={indexStyles.spacer} />

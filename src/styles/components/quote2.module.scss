@@ -1,0 +1,32 @@
+@use '../abstracts//breakpoints.scss' as breakpoint;
+@use '../abstracts//variables.scss' as var;
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px 0;
+
+  @include breakpoint.for_breakpoint(mobile tablet) {
+    padding: 100px 0;
+  }
+
+  .headline {
+    max-width: 680px;
+    font-size: 35px;
+    line-height: 50px;
+    color: var.$color-primary;
+    text-align: center;
+    margin: 0px;
+
+    @include breakpoint.for_breakpoint(mobile tablet) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    span {
+      color: var.$color-base;
+    }
+  }
+}
