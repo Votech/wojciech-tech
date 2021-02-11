@@ -45,5 +45,19 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Wojciech Mietlinski Portfolio Website`,
+        short_name: `Wojciech Mietlinski`,
+        description: `Portfolio website and blog of Wojciech Mietlinski. Main topics: web development, fronted, technology of the web, software development, coding.`,
+        lang: `en`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#bbb`,
+        display: `standalone`,
+        icon: `src/assets/images/icon.png`,
+      },
+    },
   ],
 };
