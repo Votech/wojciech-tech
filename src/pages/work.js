@@ -1,15 +1,14 @@
-import React from "react"
-
-import Layout from "../components/layout"
-import PageTitle from "../components/pageTitle"
-import ProjectsList from "../components/projectsList"
-import PageContainer from "../components/pageContainer"
-import Head from "../components/head"
+import Head from '../components/head';
+import Layout from '../components/layout';
+import PageContainer from '../components/pageContainer';
+import PageTitle from '../components/pageTitle';
+import ProjectsList from '../components/projectsList';
+import React from 'react';
 
 const WorkPage = () => {
   return (
     <Layout>
-      <Head title="Work" />
+      <Head title='Work' />
       <PageTitle>
         <h1>
           Selected <span>work</span>
@@ -19,7 +18,7 @@ const WorkPage = () => {
         <ProjectsList />
       </PageContainer>
     </Layout>
-  )
-}
+  );
+};
 
-export default WorkPage
+export default WorkPage;

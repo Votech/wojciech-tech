@@ -1,20 +1,20 @@
-import React, { useState } from "react"
+import '../styles/pages/index.scss';
 
-import "../styles/pages/index.scss"
-import layoutStyles from "../styles/components/layout.module.scss"
+import React, { useState } from 'react';
 
-import Header from "./header"
-import Footer from "./footer"
-import Sidebar from "./sidebar"
-import Backdrop from "../components/backdrop"
-import SidebarDrawer from "../components/sidebarDrawer"
+import Backdrop from '../components/backdrop';
+import Footer from './footer';
+import Header from './header';
+import Sidebar from './sidebar';
+import SidebarDrawer from '../components/sidebarDrawer';
+import layoutStyles from '../styles/components/layout.module.scss';
 
 const Layout = ({ children }) => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false)
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const sidebarHandler = () => {
-    setSidebarOpen(!isSidebarOpen)
-  }
+    setSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <div className={layoutStyles.container}>
@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

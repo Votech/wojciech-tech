@@ -1,15 +1,13 @@
-import React from "react"
-
-import { Link } from "gatsby"
-
-import blogCardStyles from "../styles/components/blogCard.module.scss"
+import { Link } from 'gatsby';
+import React from 'react';
+import blogCardStyles from '../styles/components/blogCard.module.scss';
 
 const BlogCard = ({ imgSrc, imgAlt, readTime, date, title, to }) => {
   return (
     <div className={blogCardStyles.container}>
       <Link to={to}>
         <img
-          loading="lazy"
+          loading='lazy'
           src={imgSrc}
           alt={imgAlt}
           className={blogCardStyles.image}
@@ -26,7 +24,7 @@ const BlogCard = ({ imgSrc, imgAlt, readTime, date, title, to }) => {
         </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default BlogCard
+export default BlogCard;

@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby';
 
-import Card from "../components/card"
+import Card from '../components/card';
+import React from 'react';
 
 const ProjectsList = () => {
   const data = useStaticQuery(graphql`
@@ -23,21 +23,21 @@ const ProjectsList = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div
       style={{
-        width: "100%",
-        boxSizing: "border-box",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        width: '100%',
+        boxSizing: 'border-box',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       }}
     >
       {data.allContentfulProject.edges.map((edge, index) => {
         // destructing data from map above
-        const { slug, title, title2, image } = edge.node
+        const { slug, title, title2, image } = edge.node;
 
         return (
           <Card
@@ -49,10 +49,10 @@ const ProjectsList = () => {
             title2={title2}
             backgroundImageSrc={image.file.url}
           />
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default ProjectsList
+export default ProjectsList;

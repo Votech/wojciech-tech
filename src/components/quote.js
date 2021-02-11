@@ -1,6 +1,5 @@
-import React from "react"
-
-import quoteStyles from "../styles/components/quote.module.scss"
+import React from 'react';
+import quoteStyles from '../styles/components/quote.module.scss';
 
 const Quote = ({ maxWidth, children }) => {
   return (
@@ -9,7 +8,7 @@ const Quote = ({ maxWidth, children }) => {
         {children}
       </h3>
     </div>
-  )
-}
+  );
+};
 
-export default Quote
+export default Quote;

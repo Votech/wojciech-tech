@@ -1,33 +1,30 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useState } from 'react';
 
-import { useLocation } from "@reach/router"
-
-import { RemoveScroll } from "react-remove-scroll"
-
-import BurgerButton from "./burgerButton"
-
-import sidebarStyles from "../styles/components/sidebar.module.scss"
+import BurgerButton from './burgerButton';
+import { RemoveScroll } from 'react-remove-scroll';
+import sidebarStyles from '../styles/components/sidebar.module.scss';
+import { useLocation } from '@reach/router';
 
 const Sidebar = ({ isSidebarOpen, sidebarHandler }) => {
-  const [legend, setLegend] = useState("")
-  const location = useLocation()
-  const { pathname } = location
+  const [legend, setLegend] = useState('');
+  const location = useLocation();
+  const { pathname } = location;
 
   useEffect(() => {
     if (isSidebarOpen === true) {
-      setLegend("CLICK TO CLOSE")
-    } else if (pathname === "/") {
-      setTimeout(() => setLegend(">  HELLO WORLD"), 100)
-    } else if (pathname === "/work") {
-      setTimeout(() => setLegend("MY WORK"), 100)
-    } else if (pathname === "/about") {
-      setTimeout(() => setLegend("ABOUT ME"), 100)
-    } else if (pathname === "/blog") {
-      setTimeout(() => setLegend("BLOG"), 100)
-    } else if (pathname === "/contact") {
-      setTimeout(() => setLegend("CONTACT"), 100)
+      setLegend('CLICK TO CLOSE');
+    } else if (pathname === '/') {
+      setTimeout(() => setLegend('>  HELLO WORLD'), 100);
+    } else if (pathname === '/work') {
+      setTimeout(() => setLegend('MY WORK'), 100);
+    } else if (pathname === '/about') {
+      setTimeout(() => setLegend('ABOUT ME'), 100);
+    } else if (pathname === '/blog') {
+      setTimeout(() => setLegend('BLOG'), 100);
+    } else if (pathname === '/contact') {
+      setTimeout(() => setLegend('CONTACT'), 100);
     }
-  }, [isSidebarOpen, pathname])
+  }, [isSidebarOpen, pathname]);
 
   return (
     <div className={sidebarStyles.sidebar} onClick={() => sidebarHandler()}>
@@ -37,7 +34,7 @@ const Sidebar = ({ isSidebarOpen, sidebarHandler }) => {
         <p>{legend}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

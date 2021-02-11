@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby';
 
-import BlogGrid from "../components/blogGrid"
-import BlogCard from "../components/blogCard"
+import BlogCard from '../components/blogCard';
+import BlogGrid from '../components/blogGrid';
+import React from 'react';
 
 const BlogLastThreePosts = () => {
   const data = useStaticQuery(graphql`
@@ -27,13 +27,19 @@ const BlogLastThreePosts = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <BlogGrid>
       {data.allContentfulBlogPost.edges.map((edge, index) => {
         // destructing data from map above
-        const { slug, title, publishedDate, articleImage, readTime } = edge.node
+        const {
+          slug,
+          title,
+          publishedDate,
+          articleImage,
+          readTime,
+        } = edge.node;
 
         return (
           <BlogCard
@@ -45,10 +51,10 @@ const BlogLastThreePosts = () => {
             imgAlt={articleImage && articleImage.file.fileName}
             readTime={readTime}
           />
-        )
+        );
       })}
     </BlogGrid>
-  )
-}
+  );
+};
 
-export default BlogLastThreePosts
+export default BlogLastThreePosts;

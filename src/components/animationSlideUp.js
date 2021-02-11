@@ -1,6 +1,5 @@
-import React from "react"
-
-import animationSlideUpStyles from "../styles/components/animationSlideUp.module.scss"
+import React from 'react';
+import animationSlideUpStyles from '../styles/components/animationSlideUp.module.scss';
 
 const AnimationSlideUp = ({
   children,
@@ -19,7 +18,7 @@ const AnimationSlideUp = ({
         {children}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AnimationSlideUp
+export default AnimationSlideUp;

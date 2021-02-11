@@ -1,20 +1,19 @@
-import React from "react"
-
-import burgerButtonStyles from "../styles/components/burgerButton.module.scss"
+import React from 'react';
+import burgerButtonStyles from '../styles/components/burgerButton.module.scss';
 
 const BurgerButton = ({ small, isSidebarOpen, ...otherProps }) => {
   const burgerButtonStyle = small
     ? burgerButtonStyles.burgerButtonSmall
-    : burgerButtonStyles.burgerButton
+    : burgerButtonStyles.burgerButton;
 
-  const close = isSidebarOpen ? burgerButtonStyles.close : null
+  const close = isSidebarOpen ? burgerButtonStyles.close : null;
 
   return (
     <div className={`${burgerButtonStyle} ${close}`} {...otherProps}>
       <div className={burgerButtonStyles.line} />
       <div className={burgerButtonStyles.line} />
     </div>
-  )
-}
+  );
+};
 
-export default BurgerButton
+export default BurgerButton;

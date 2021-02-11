@@ -1,9 +1,7 @@
-import React from "react"
-import Img from "gatsby-image"
-
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-
-import cardStyles from "../styles/components/card.module.scss"
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import Img from 'gatsby-image';
+import React from 'react';
+import cardStyles from '../styles/components/card.module.scss';
 
 const Card = ({
   primary,
@@ -17,22 +15,22 @@ const Card = ({
   data,
 }) => {
   // setting the style of component
-  let backgroundColor = "#f5f5f5"
-  let textColor = "#222222"
+  let backgroundColor = '#f5f5f5';
+  let textColor = '#222222';
 
   if (primary) {
-    backgroundColor = "#fdf0f2"
-    textColor = "#770012"
+    backgroundColor = '#fdf0f2';
+    textColor = '#770012';
   } else if (secondary) {
-    backgroundColor = "#f8f7ff"
-    textColor = "#271c64"
+    backgroundColor = '#f8f7ff';
+    textColor = '#271c64';
   }
-  console.log(data)
+  console.log(data);
   return (
     <AniLink
       cover
-      direction="up"
-      bg="#BBBBBB"
+      direction='up'
+      bg='#BBBBBB'
       to={to}
       className={cardStyles.container}
       id={profile && cardStyles.profile}
@@ -44,28 +42,28 @@ const Card = ({
       {data && (
         <Img
           fluid={data.image.childImageSharp.fluid}
-          alt="Wojciech Mietlinski"
+          alt='Wojciech Mietlinski'
           className={cardStyles.image}
-          loading="lazy"
-          style={{ position: "absolute" }}
+          loading='lazy'
+          style={{ position: 'absolute' }}
         />
       )}
       <h2 className={cardStyles.headline1} style={{ color: `${textColor}` }}>
         {/* function below creats new line every "\n"  */}
-        {title1.split("\n").map((item, key) => {
+        {title1.split('\n').map((item, key) => {
           return (
             <span key={key}>
               {item}
               <br />
             </span>
-          )
+          );
         })}
       </h2>
       <h3 className={cardStyles.headline2} style={{ color: `${textColor}` }}>
         {title2}
       </h3>
     </AniLink>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

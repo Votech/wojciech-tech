@@ -1,18 +1,15 @@
-import React from "react"
-
-import Layout from "../components/layout"
-import PageTitle from "../components/pageTitle"
-import PageContainer from "../components/pageContainer"
-import Head from "../components/head"
-
-import aboutStyles from "../styles/pages/about.module.scss"
-
-import profilePhoto from "../assets/images/profile_photo_transparent.png"
+import Head from '../components/head';
+import Layout from '../components/layout';
+import PageContainer from '../components/pageContainer';
+import PageTitle from '../components/pageTitle';
+import React from 'react';
+import aboutStyles from '../styles/pages/about.module.scss';
+import profilePhoto from '../assets/images/profile_photo_transparent.png';
 
 const AboutPage = () => {
   return (
     <Layout>
-      <Head title="About" />
+      <Head title='About' />
       <PageTitle>
         <h1>
           <span>About</span> me
@@ -25,7 +22,7 @@ const AboutPage = () => {
             <img
               className={aboutStyles.image}
               src={profilePhoto}
-              alt="Wojciech Mietlinski"
+              alt='Wojciech Mietlinski'
             />
             <h1 className={aboutStyles.headline}>Hello</h1>
           </div>
@@ -50,7 +47,7 @@ const AboutPage = () => {
         </div>
       </PageContainer>
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
