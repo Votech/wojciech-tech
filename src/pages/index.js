@@ -41,12 +41,10 @@ const IndexPage = ({ data }) => {
 
         <ProjectsList />
 
-        <section>
-          <Quote maxWidth="770px">
-            <span> Occasionally I write</span> code related articles for other
-            people to help them improve their skills<span>.</span>
-          </Quote>
-        </section>
+        <Quote maxWidth="770px">
+          <span> Occasionally I write</span> code related articles for other
+          people to help them improve their skills<span>.</span>
+        </Quote>
 
         <section className={indexStyles.posts}>
           <BlogLastThreePosts />
