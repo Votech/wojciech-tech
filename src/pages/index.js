@@ -3,11 +3,11 @@ import { graphql } from 'gatsby';
 
 import indexStyles from '../styles/pages/index.module.scss';
 
+import Layout from '../components/layout';
 import BlogLastThreePosts from '../components/blogLastThreePosts';
 import ButtonLink from '../components/buttonLink';
 import Card from '../components/card';
 import Head from '../components/head';
-import Layout from '../components/layout';
 import PageTitle from '../components/pageTitle';
 import ProjectsList from '../components/projectsList';
 import Quote from '../components/quote';

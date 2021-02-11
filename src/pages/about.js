@@ -1,9 +1,9 @@
 import aboutStyles from '../styles/pages/about.module.scss';
 
 import React from 'react';
+import Layout from '../components/layout';
 
 import Head from '../components/head';
-import Layout from '../components/layout';
 import PageContainer from '../components/pageContainer';
 import PageTitle from '../components/pageTitle';
 

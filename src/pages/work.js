@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Head from '../components/head';
 import Layout from '../components/layout';
+import Head from '../components/head';
 import PageContainer from '../components/pageContainer';
 import PageTitle from '../components/pageTitle';
 import ProjectsList from '../components/projectsList';
