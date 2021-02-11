@@ -32,12 +32,10 @@ const IndexPage = ({ data }) => {
           data={data}
         />
 
-        <section>
-          <Quote maxWidth="770px">
-            I am developer with deep passion for creating software for the web
-            <span> usable for everyone</span>.
-          </Quote>
-        </section>
+        <Quote maxWidth="770px">
+          I am developer with deep passion for creating software for the web
+          <span> usable for everyone</span>.
+        </Quote>
 
         <ProjectsList />
 
