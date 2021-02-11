@@ -31,20 +31,19 @@ const IndexPage = ({ data }) => {
           title2={`About me`}
           data={data}
         />
-        <section>
-          <Quote maxWidth="770px">
-            I am developer with deep passion for creating software for the web
-            <span> usable for everyone</span>.
-          </Quote>
-        </section>
+
+        <Quote maxWidth="770px">
+          I am developer with deep passion for creating software for the web
+          <span> usable for everyone</span>.
+        </Quote>
 
         <ProjectsList />
-        <section>
-          <Quote maxWidth="770px">
-            <span> Occasionally I write</span> code related articles for other
-            people to help them improve their skills<span>.</span>
-          </Quote>
-        </section>
+
+        <Quote maxWidth="770px">
+          <span> Occasionally I write</span> code related articles for other
+          people to help them improve their skills<span>.</span>
+        </Quote>
+
         <section className={indexStyles.posts}>
           <BlogLastThreePosts />
           <div className={indexStyles.spacer} />
