@@ -1,9 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import Layout from '../components/layout';
+
 import indexStyles from '../styles/pages/index.module.scss';
 
-import Layout from '../components/layout';
 import BlogLastThreePosts from '../components/blogLastThreePosts';
 import ButtonLink from '../components/buttonLink';
 import Card from '../components/card';

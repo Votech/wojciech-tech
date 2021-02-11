@@ -1,7 +1,7 @@
-import aboutStyles from '../styles/pages/about.module.scss';
-
 import React from 'react';
 import Layout from '../components/layout';
+
+import aboutStyles from '../styles/pages/about.module.scss';
 
 import Head from '../components/head';
 import PageContainer from '../components/pageContainer';
