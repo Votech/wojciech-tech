@@ -1,16 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import indexStyles from "../styles/pages/index.module.scss"
 import Layout from "../components/layout"
+import Head from "../components/head"
 import PageTitle from "../components/pageTitle"
 import Card from "../components/card"
 import Quote from "../components/quote"
+import ProjectsList from "../components/projectsList"
 import BlogLastThreePosts from "../components/blogLastThreePosts"
 import ButtonLink from "../components/buttonLink"
-import ProjectsList from "../components/projectsList"
-import Head from "../components/head"
-
-import indexStyles from "../styles/pages/index.module.scss"
 
 import profilePhoto from "../assets/images/profile_photo_transparent.png"
 
