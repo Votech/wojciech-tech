@@ -5,13 +5,14 @@ import Layout from '../components/layout';
 
 import indexStyles from '../styles/pages/index.module.scss';
 
-import BlogLastThreePosts from '../components/blogLastThreePosts';
-import ButtonLink from '../components/buttonLink';
-import Card from '../components/card';
 import Head from '../components/head';
 import PageTitle from '../components/pageTitle';
-import ProjectsList from '../components/projectsList';
+import Card from '../components/card';
 import Quote from '../components/quote';
+import PageContainer from '../components/pageContainer';
+import ProjectsList from '../components/projectsList';
+import BlogLastThreePosts from '../components/blogLastThreePosts';
+import ButtonLink from '../components/buttonLink';
 import profilePhoto from '../assets/images/profile_photo_transparent.png';
 
 const IndexPage = ({ data }) => {
@@ -23,7 +24,7 @@ const IndexPage = ({ data }) => {
           Developer creating <br /> <span>digital </span> products
         </h1>
       </PageTitle>
-      <main className={indexStyles.body}>
+      <PageContainer>
         <Card
           profile
           to='/about'
@@ -49,7 +50,7 @@ const IndexPage = ({ data }) => {
           <div className={indexStyles.spacer} />
           <ButtonLink to='/blog'>Show all stories</ButtonLink>
         </section>
-      </main>
+      </PageContainer>
     </Layout>
   );
 };
