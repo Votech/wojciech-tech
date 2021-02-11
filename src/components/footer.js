@@ -1,6 +1,8 @@
-import React from 'react';
-import Underline from '../components/underline';
 import footerStyles from '../styles/components/footer.module.scss';
+
+import React from 'react';
+
+import Underline from '../components/underline';
 
 const Footer = () => {
   const year = new Date().getFullYear();

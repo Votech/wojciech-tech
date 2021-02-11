@@ -1,9 +1,10 @@
+import React from 'react';
+
 import ContactForm from '../components/contactForm';
 import Head from '../components/head';
 import Layout from '../components/layout';
 import PageContainer from '../components/pageContainer';
 import PageTitle from '../components/pageTitle';
-import React from 'react';
 
 const ContactPage = () => {
   return (

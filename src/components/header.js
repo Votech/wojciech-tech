@@ -1,8 +1,11 @@
+import headerStyles from '../styles/components/header.module.scss';
+
+import React from 'react';
+
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
+
 import BurgerButton from './burgerButton';
 import Navbar from './navbar';
-import React from 'react';
-import headerStyles from '../styles/components/header.module.scss';
 
 const Header = ({ isSidebarOpen, sidebarHandler }) => {
   return (

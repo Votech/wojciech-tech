@@ -1,13 +1,13 @@
 import '../styles/pages/index.scss';
+import layoutStyles from '../styles/components/layout.module.scss';
 
 import React, { useState } from 'react';
 
-import Backdrop from '../components/backdrop';
+import Backdrop from './backdrop';
 import Footer from './footer';
 import Header from './header';
 import Sidebar from './sidebar';
-import SidebarDrawer from '../components/sidebarDrawer';
-import layoutStyles from '../styles/components/layout.module.scss';
+import SidebarDrawer from './sidebarDrawer';
 
 const Layout = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);

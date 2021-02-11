@@ -1,7 +1,8 @@
-import { Field, Form, Formik } from 'formik';
+import contactFormStyles from '../styles/components/contactForm.module.scss';
 
 import React from 'react';
-import contactFormStyles from '../styles/components/contactForm.module.scss';
+
+import { Field, Form, Formik } from 'formik';
 
 const contactForm = () => {
   // function encode takes object of key: "value" pairs and turns it into query string

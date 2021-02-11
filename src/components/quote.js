@@ -1,5 +1,6 @@
-import React from 'react';
 import quoteStyles from '../styles/components/quote.module.scss';
+
+import React from 'react';
 
 const Quote = ({ maxWidth, children }) => {
   return (

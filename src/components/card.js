@@ -1,7 +1,8 @@
+import cardStyles from '../styles/components/card.module.scss';
+
+import React from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Img from 'gatsby-image';
-import React from 'react';
-import cardStyles from '../styles/components/card.module.scss';
 
 const Card = ({
   primary,

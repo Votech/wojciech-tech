@@ -1,6 +1,7 @@
-import { Link } from 'gatsby';
-import React from 'react';
 import blogCardStyles from '../styles/components/blogCard.module.scss';
+
+import React from 'react';
+import { Link } from 'gatsby';
 
 const BlogCard = ({ imgSrc, imgAlt, readTime, date, title, to }) => {
   return (

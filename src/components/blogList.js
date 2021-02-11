@@ -1,8 +1,8 @@
+import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import BlogCard from '../components/blogCard';
 import BlogGrid from '../components/blogGrid';
-import React from 'react';
 
 const BlogList = () => {
   const data = useStaticQuery(graphql`

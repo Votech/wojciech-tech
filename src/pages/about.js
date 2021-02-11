@@ -1,9 +1,12 @@
+import aboutStyles from '../styles/pages/about.module.scss';
+
+import React from 'react';
+
 import Head from '../components/head';
 import Layout from '../components/layout';
 import PageContainer from '../components/pageContainer';
 import PageTitle from '../components/pageTitle';
-import React from 'react';
-import aboutStyles from '../styles/pages/about.module.scss';
+
 import profilePhoto from '../assets/images/profile_photo_transparent.png';
 
 const AboutPage = () => {

@@ -1,8 +1,8 @@
+import navbarStyles from '../styles/components/navbar.module.scss';
+
 import React, { useState } from 'react';
 
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import navbarStyles from '../styles/components/navbar.module.scss';
-
 const Navbar = ({ className }) => {
   const [isHovered, setIsHovered] = useState(false);
 

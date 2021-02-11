@@ -1,6 +1,7 @@
+import React from 'react';
+
 import Head from '../components/head';
 import Layout from '../components/layout';
-import React from 'react';
 
 const NotFound = () => {
   return (

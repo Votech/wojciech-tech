@@ -1,9 +1,13 @@
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import AnimationSlideUp from '../components/animationSlideUp';
-import React from 'react';
-import Underline from '../components/underline';
 import sidebarDrawerStyles from '../styles/components/sidebarDrawer.module.scss';
+
+import React from 'react';
+
 import { useLocation } from '@reach/router';
+
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+
+import AnimationSlideUp from '../components/animationSlideUp';
+import Underline from '../components/underline';
 
 const SidebarDrawer = ({ isSidebarOpen, sidebarHandler }) => {
   const location = useLocation();

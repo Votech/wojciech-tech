@@ -1,3 +1,8 @@
+import indexStyles from '../styles/pages/index.module.scss';
+
+import React from 'react';
+import { graphql } from 'gatsby';
+
 import BlogLastThreePosts from '../components/blogLastThreePosts';
 import ButtonLink from '../components/buttonLink';
 import Card from '../components/card';
@@ -6,9 +11,6 @@ import Layout from '../components/layout';
 import PageTitle from '../components/pageTitle';
 import ProjectsList from '../components/projectsList';
 import Quote from '../components/quote';
-import React from 'react';
-import { graphql } from 'gatsby';
-import indexStyles from '../styles/pages/index.module.scss';
 import profilePhoto from '../assets/images/profile_photo_transparent.png';
 
 const IndexPage = ({ data }) => {

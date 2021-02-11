@@ -1,9 +1,12 @@
+import sidebarStyles from '../styles/components/sidebar.module.scss';
+
 import React, { useEffect, useState } from 'react';
 
-import BurgerButton from './burgerButton';
 import { RemoveScroll } from 'react-remove-scroll';
-import sidebarStyles from '../styles/components/sidebar.module.scss';
+
 import { useLocation } from '@reach/router';
+
+import BurgerButton from './burgerButton';
 
 const Sidebar = ({ isSidebarOpen, sidebarHandler }) => {
   const [legend, setLegend] = useState('');

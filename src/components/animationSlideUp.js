@@ -1,4 +1,5 @@
 import React from 'react';
+
 import animationSlideUpStyles from '../styles/components/animationSlideUp.module.scss';
 
 const AnimationSlideUp = ({
