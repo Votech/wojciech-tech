@@ -13,7 +13,14 @@ const Head = ({ title }) => {
       }
     }
   `);
-  return <Helmet title={`${title} | ${data.site.siteMetadata.title}`} />;
+  return (
+    <Helmet
+      title={`${title} | ${data.site.siteMetadata.title}`}
+      htmlAttributes={{
+        lang: 'en',
+      }}
+    />
+  );
 };
 
 export default Head;
