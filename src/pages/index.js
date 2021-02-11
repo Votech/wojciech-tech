@@ -24,15 +24,13 @@ const IndexPage = ({ data }) => {
         </h1>
       </PageTitle>
       <main className={indexStyles.body}>
-        <section>
-          <Card
-            profile
-            to="/about"
-            title1={`Nice to \nmeet you `}
-            title2={`About me`}
-            data={data}
-          />
-        </section>
+        <Card
+          profile
+          to="/about"
+          title1={`Nice to \nmeet you `}
+          title2={`About me`}
+          data={data}
+        />
 
         <section>
           <Quote maxWidth="770px">
@@ -41,9 +39,7 @@ const IndexPage = ({ data }) => {
           </Quote>
         </section>
 
-        <section>
-          <ProjectsList />
-        </section>
+        <ProjectsList />
 
         <section>
           <Quote maxWidth="770px">
