@@ -33,11 +33,12 @@ const IndexPage = ({ data }) => {
           title2={`About me`}
           data={data}
         />
-
-        <Quote maxWidth='770px'>
-          I am developer with deep passion for creating software for the web
-          <span> usable for everyone</span>.
-        </Quote>
+        <section>
+          <Quote maxWidth='770px'>
+            I am developer with deep passion for creating software for the web
+            <span> usable for everyone</span>.
+          </Quote>
+        </section>
         <ProjectsList />
 
         <section className={indexStyles.posts}>
