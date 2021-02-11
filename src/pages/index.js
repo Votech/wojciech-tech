@@ -40,12 +40,11 @@ const IndexPage = ({ data }) => {
           </Quote>
         </section>
         <ProjectsList />
-
         <section className={indexStyles.posts}>
-          <Quote2 maxWidth='770px'>
+          <Quote maxWidth='770px'>
             <span> Occasionally I write</span> code related articles for other
             people to help them improve their skills<span>.</span>
-          </Quote2>
+          </Quote>
           <BlogLastThreePosts />
           <div className={indexStyles.spacer} />
           <ButtonLink to='/blog'>Show all stories</ButtonLink>
