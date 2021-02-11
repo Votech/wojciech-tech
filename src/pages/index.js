@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import PageTitle from "../components/pageTitle"
@@ -13,7 +14,7 @@ import indexStyles from "../styles/pages/index.module.scss"
 
 import profilePhoto from "../assets/images/profile_photo_transparent.png"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Head title="Home" />
@@ -28,7 +29,7 @@ const IndexPage = () => {
           to="/about"
           title1={`Nice to \nmeet you `}
           title2={`About me`}
-          imgSrc={profilePhoto}
+          data={data}
         />
         <section>
           <Quote maxWidth="770px">
@@ -53,5 +54,19 @@ const IndexPage = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    image: file(
+      relativePath: { eq: "assets/images/profile_photo_transparent.png" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

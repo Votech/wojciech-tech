@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
@@ -13,6 +14,7 @@ const Card = ({
   title2,
   to,
   profile,
+  data,
 }) => {
   // setting the style of component
   let backgroundColor = "#f5f5f5"
@@ -25,7 +27,7 @@ const Card = ({
     backgroundColor = "#f8f7ff"
     textColor = "#271c64"
   }
-
+  console.log(data)
   return (
     <AniLink
       cover
@@ -39,12 +41,13 @@ const Card = ({
         backgroundImage: `url(${backgroundImageSrc})`,
       }}
     >
-      {imgSrc && (
-        <img
-          src={imgSrc}
+      {data && (
+        <Img
+          fluid={data.image.childImageSharp.fluid}
           alt="Wojciech Mietlinski"
           className={cardStyles.image}
           loading="lazy"
+          style={{ position: "absolute" }}
         />
       )}
       <h2 className={cardStyles.headline1} style={{ color: `${textColor}` }}>
