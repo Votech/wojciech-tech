@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
+import projectsListStyles from '../styles/components/projectsList.module.scss';
+
 import Card from '../components/card';
 
 const ProjectsList = () => {
@@ -26,15 +28,7 @@ const ProjectsList = () => {
   `);
 
   return (
-    <div
-      style={{
-        width: '100%',
-        boxSizing: 'border-box',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}
-    >
+    <div className={projectsListStyles.container}>
       {data.allContentfulProject.edges.map((edge, index) => {
         // destructing data from map above
         const { slug, title, title2, image } = edge.node;

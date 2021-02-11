@@ -35,9 +35,8 @@ const IndexPage = ({ data }) => {
           I am developer with deep passion for creating software for the web
           <span> usable for everyone</span>.
         </Quote>
-        <section style={{ width: '100%' }}>
-          <ProjectsList />
-        </section>
+
+        <ProjectsList />
 
         <Quote maxWidth='770px'>
           <span> Occasionally I write</span> code related articles for other
