@@ -24,25 +24,33 @@ const IndexPage = ({ data }) => {
         </h1>
       </PageTitle>
       <main className={indexStyles.body}>
-        <Card
-          profile
-          to="/about"
-          title1={`Nice to \nmeet you `}
-          title2={`About me`}
-          data={data}
-        />
+        <section>
+          <Card
+            profile
+            to="/about"
+            title1={`Nice to \nmeet you `}
+            title2={`About me`}
+            data={data}
+          />
+        </section>
 
-        <Quote maxWidth="770px">
-          I am developer with deep passion for creating software for the web
-          <span> usable for everyone</span>.
-        </Quote>
+        <section>
+          <Quote maxWidth="770px">
+            I am developer with deep passion for creating software for the web
+            <span> usable for everyone</span>.
+          </Quote>
+        </section>
 
-        <ProjectsList />
+        <section>
+          <ProjectsList />
+        </section>
 
-        <Quote maxWidth="770px">
-          <span> Occasionally I write</span> code related articles for other
-          people to help them improve their skills<span>.</span>
-        </Quote>
+        <section>
+          <Quote maxWidth="770px">
+            <span> Occasionally I write</span> code related articles for other
+            people to help them improve their skills<span>.</span>
+          </Quote>
+        </section>
 
         <section className={indexStyles.posts}>
           <BlogLastThreePosts />
