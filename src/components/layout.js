@@ -1,7 +1,8 @@
 import '../styles/pages/index.scss';
-import layoutStyles from '../styles/components/layout.module.scss';
 
 import React, { useState } from 'react';
+
+import layoutStyles from '../styles/components/layout.module.scss';
 
 import Backdrop from './backdrop';
 import Footer from './footer';

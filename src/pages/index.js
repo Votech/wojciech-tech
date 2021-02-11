@@ -1,7 +1,7 @@
-import indexStyles from '../styles/pages/index.module.scss';
-
 import React from 'react';
 import { graphql } from 'gatsby';
+
+import indexStyles from '../styles/pages/index.module.scss';
 
 import BlogLastThreePosts from '../components/blogLastThreePosts';
 import ButtonLink from '../components/buttonLink';
@@ -35,8 +35,9 @@ const IndexPage = ({ data }) => {
           I am developer with deep passion for creating software for the web
           <span> usable for everyone</span>.
         </Quote>
-
-        <ProjectsList />
+        <section style={{ width: '100%' }}>
+          <ProjectsList />
+        </section>
 
         <Quote maxWidth='770px'>
           <span> Occasionally I write</span> code related articles for other
