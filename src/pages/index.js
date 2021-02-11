@@ -11,12 +11,11 @@ import PageContainer from '../components/pageContainer';
 import Card from '../components/card';
 import Quote from '../components/quote';
 import ProjectsList from '../components/projectsList';
-import Quote2 from '../components/quote2';
 import BlogLastThreePosts from '../components/blogLastThreePosts';
 import ButtonLink from '../components/buttonLink';
-import profilePhoto from '../assets/images/profile_photo_transparent.png';
 
 const IndexPage = ({ data }) => {
+  // Ugly jsx structure is due to gatsby css pre proccesing issue, this structure is workaroud, so styles are displayed correctly more about the topic here https://github.com/gatsbyjs/gatsby/issues/9733
   return (
     <Layout>
       <Head title='Home' />

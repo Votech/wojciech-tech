@@ -1,8 +1,8 @@
-import cardStyles from '../styles/components/card.module.scss';
-
 import React from 'react';
+
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Img from 'gatsby-image';
+import cardStyles from '../styles/components/card.module.scss';
 
 const Card = ({
   primary,
@@ -26,7 +26,6 @@ const Card = ({
     backgroundColor = '#f8f7ff';
     textColor = '#271c64';
   }
-  console.log(data);
   return (
     <AniLink
       cover

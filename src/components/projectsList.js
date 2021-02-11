@@ -20,6 +20,9 @@ const ProjectsList = () => {
                 url
                 fileName
               }
+              fluid {
+                ...GatsbyContentfulFluid
+              }
             }
           }
         }
@@ -42,6 +45,7 @@ const ProjectsList = () => {
             title1={title}
             title2={title2}
             backgroundImageSrc={image.file.url}
+            fluid={image.fluid}
           />
         );
       })}

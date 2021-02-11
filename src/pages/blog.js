@@ -13,7 +13,7 @@ const BlogPage = () => {
       <PageTitle maxWidth='660px'>
         <h1>
           <span>Thouhts</span> <br />
-          about design
+          about code
         </h1>
       </PageTitle>
 

@@ -1,15 +1,15 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 import aboutStyles from '../styles/pages/about.module.scss';
 
+import Img from 'gatsby-image';
 import Head from '../components/head';
 import PageContainer from '../components/pageContainer';
 import PageTitle from '../components/pageTitle';
 
-import profilePhoto from '../assets/images/profile_photo_transparent.png';
-
-const AboutPage = () => {
+const AboutPage = ({ data }) => {
   return (
     <Layout>
       <Head title='About' />
@@ -22,10 +22,11 @@ const AboutPage = () => {
       <PageContainer>
         <div className={aboutStyles.header}>
           <div className={aboutStyles.image_wrapper}>
-            <img
+            <Img
               className={aboutStyles.image}
-              src={profilePhoto}
+              fluid={data.image.childImageSharp.fluid}
               alt='Wojciech Mietlinski'
+              loading='lazy'
             />
             <h1 className={aboutStyles.headline}>Hello</h1>
           </div>
@@ -52,5 +53,19 @@ const AboutPage = () => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query {
+    image: file(
+      relativePath: { eq: "assets/images/profile_photo_transparent.png" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default AboutPage;
