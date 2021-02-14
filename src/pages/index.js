@@ -45,8 +45,9 @@ const IndexPage = ({ data }) => {
             people to help them improve their skills<span>.</span>
           </Quote>
           <BlogLastThreePosts />
-          <div className={indexStyles.spacer} />
-          <ButtonLink to='/blog'>Show all stories</ButtonLink>
+          <ButtonLink className={indexStyles.buttonStories} to='/blog'>
+            Show all stories
+          </ButtonLink>
         </section>
       </PageContainer>
     </Layout>

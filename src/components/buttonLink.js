@@ -5,9 +5,9 @@ import { Link } from 'gatsby';
 
 import Underline from '../components/underline';
 
-const ButtonLink = ({ to, children }) => {
+const ButtonLink = ({ to, children, className, ...otherProps }) => {
   return (
-    <div className={buttonLinkStyles.flex}>
+    <div className={`${buttonLinkStyles.flex} ${className}`} {...otherProps}>
       <Link to={to}>
         <div className={buttonLinkStyles.container}>
           <Underline>
