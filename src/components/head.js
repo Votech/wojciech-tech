@@ -3,6 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { Helmet } from 'react-helmet';
 
+import thumbnail from '../assets/images/thumbnail.jpeg';
+
 const Head = ({ title }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -19,7 +21,9 @@ const Head = ({ title }) => {
       htmlAttributes={{
         lang: 'en',
       }}
-    />
+    >
+      <link rel='image_src' href={thumbnail} />
+    </Helmet>
   );
 };
 
