@@ -1,15 +1,15 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { BLOCKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
 
-import blogStyles from "../styles/templates/blog.module.scss"
+import blogStyles from '../styles/templates/blog.module.scss';
 
-import Layout from "../components/layout"
-import Head from "../components/head"
-import PageContainer from "../components/pageContainer"
-import BlogLastThreePosts from "../components/blogLastThreePosts"
+import Layout from '../components/layout';
+import Head from '../components/head';
+import PageContainer from '../components/pageContainer';
+import BlogLastThreePosts from '../components/blogLastThreePosts';
 
 export const query = graphql`
   query SingleContentFulBlogData($slug: String!) {
@@ -38,29 +38,29 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-const Blog = props => {
+const Blog = (props) => {
   const options = {
     renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: node => {
-        const imageID = node.data.target.sys.id
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const imageID = node.data.target.sys.id;
         const {
           file: { url },
           title,
         } = references.find(({ contentful_id: id }) => {
-          return id === imageID
-        })
+          return id === imageID;
+        });
 
-        return <img src={url} alt={title} loading="lazy" />
+        return <img src={url} alt={title} loading='lazy' />;
       },
     },
-    renderText: text => {
-      return text.split("\n").reduce((children, textSegment, index) => {
-        return [...children, index > 0 && <br key={index} />, textSegment]
-      }, [])
+    renderText: (text) => {
+      return text.split('\n').reduce((children, textSegment, index) => {
+        return [...children, index > 0 && <br key={index} />, textSegment];
+      }, []);
     },
-  }
+  };
 
   // destructing from props.data
   const {
@@ -74,10 +74,10 @@ const Blog = props => {
       },
       body: { raw, references },
     },
-  } = props.data
+  } = props.data;
 
   // parsing the json  :
-  const rawBlogPostObject = JSON.parse(raw)
+  const rawBlogPostObject = JSON.parse(raw);
 
   return (
     <Layout>
@@ -96,7 +96,7 @@ const Blog = props => {
             </div>
           </header>
           <div className={blogStyles.image}>
-            <img loading="lazy" src={url} alt={fileName} />
+            <img loading='lazy' src={url} alt={fileName} />
           </div>
           <div className={blogStyles.main}>
             {documentToReactComponents(rawBlogPostObject, options)}
@@ -108,7 +108,7 @@ const Blog = props => {
         </article>
       </PageContainer>
     </Layout>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
