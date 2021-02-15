@@ -40,15 +40,14 @@
       bottom: 90px;
       margin: 0;
       font-size: 200px;
-      color: var.$color-primary;
+      color: var.$color-blue-text;
 
       @include breakpoint.for_breakpoint(mobile) {
-        font-size: 100px;
-        bottom: -125px;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 90px;
+        bottom: -130px;
+        color: var.$color-primary;
         left: 0;
-        right: 0;
+
         text-align: center;
       }
       @include breakpoint.for_breakpoint(tablet) {

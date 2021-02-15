@@ -33,20 +33,18 @@ const AboutPage = ({ data }) => {
         </div>
         <div className={aboutStyles.container}>
           <p className={aboutStyles.story}>
-            My name is Semih, and I’m a digital designer from the Netherlands. I
-            am currently working at Amsterdam-based design agency Unc Inc
-            creating digital experiences for brands that want to make the world
-            more sustainable.
+            My name is Wojciech and I’m a frontend developer. Most of my time I
+            spend working with ReactJS and it’s ecosystem. I’m building my own
+            side projects and I’m developing websites for companies that want to
+            exist in the digital market.
             <br />
             <br />
-            By designing accessible interfaces, I make digital products usable
-            for everyone.
+            By developing blazing fast, accessible websites, I make products
+            usable for everyone.
             <br />
             <br />
-            In my spare time, I write about design and help other designers
-            improve their skills by sharing UI & UX related insights. Besides
-            that, I enjoy some deep sci-fi movies (Interstellar is my all-time
-            favorite), good music, and some quality time with my newborn son.
+            In my spare time I read self education books, I enjoy some strategy
+            games, good music, and some quality time downtown.
           </p>
         </div>
       </PageContainer>
