@@ -17,6 +17,9 @@ module.exports = {
       options: {
         trackingIds: [process.env.GA_TRACKING_ID],
       },
+      pluginConfig: {
+        head: true,
+      },
     },
     {
       resolve: 'gatsby-source-contentful',
