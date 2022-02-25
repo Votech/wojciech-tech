@@ -7,5 +7,3 @@
 My portfolio and blog website. Connected to headless CMS for ease of adding new projects and blog posts. Fast performance with gatsby-image plugin and SEO with react-helmet.
 
 Stack: React.js, Gatsby, Contentful, Netlify, SCSS.
-
-# wojciech-tech

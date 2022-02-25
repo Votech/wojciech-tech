@@ -1,8 +1,8 @@
-import navbarStyles from '../styles/components/navbar.module.scss';
+import navbarStyles from "../styles/components/navbar.module.scss";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 const Navbar = ({ className }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -12,9 +12,9 @@ const Navbar = ({ className }) => {
         <li>
           <AniLink
             cover
-            direction='up'
-            bg='#BBBBBB'
-            to='/work'
+            direction="up"
+            bg="#BBBBBB"
+            to="/work"
             activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -25,9 +25,9 @@ const Navbar = ({ className }) => {
         <li>
           <AniLink
             cover
-            direction='up'
-            bg='#BBBBBB'
-            to='/about'
+            direction="up"
+            bg="#BBBBBB"
+            to="/about"
             activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -35,7 +35,7 @@ const Navbar = ({ className }) => {
             <p>About</p>
           </AniLink>
         </li>
-        <li>
+        {/* <li>
           <AniLink
             cover
             direction='up'
@@ -47,13 +47,13 @@ const Navbar = ({ className }) => {
           >
             <p>Blog</p>
           </AniLink>
-        </li>
+        </li> */}
         <li>
           <AniLink
             cover
-            direction='up'
-            bg='#BBBBBB'
-            to='/contact'
+            direction="up"
+            bg="#BBBBBB"
+            to="/contact"
             activeClassName={!isHovered ? navbarStyles.active : null}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

@@ -1,13 +1,13 @@
-import sidebarDrawerStyles from '../styles/components/sidebarDrawer.module.scss';
+import sidebarDrawerStyles from "../styles/components/sidebarDrawer.module.scss";
 
-import React from 'react';
+import React from "react";
 
-import { useLocation } from '@reach/router';
+import { useLocation } from "@reach/router";
 
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-import AnimationSlideUp from '../components/animationSlideUp';
-import Underline from '../components/underline';
+import AnimationSlideUp from "../components/animationSlideUp";
+import Underline from "../components/underline";
 
 const SidebarDrawer = ({ isSidebarOpen, sidebarHandler }) => {
   const location = useLocation();
@@ -21,16 +21,16 @@ const SidebarDrawer = ({ isSidebarOpen, sidebarHandler }) => {
       <AnimationSlideUp shouldAnimate={isSidebarOpen}>
         <Underline>
           <AniLink
-            to='/'
-            onClick={pathname === '/' ? () => sidebarHandler() : null}
+            to="/"
+            onClick={pathname === "/" ? () => sidebarHandler() : null}
             activeClassName={sidebarDrawerStyles.active}
             cover
-            direction='up'
-            bg='#BBBBBB'
+            direction="up"
+            bg="#BBBBBB"
           >
             <h1 className={`${sidebarDrawerStyles.headline}`}>Home</h1>
             <div className={`${sidebarDrawerStyles.description}`}>
-              <p>{pathname === '/' ? 'You are here' : 'Back to basics'}</p>
+              <p>{pathname === "/" ? "You are here" : "Back to basics"}</p>
             </div>
           </AniLink>
         </Underline>
@@ -39,16 +39,16 @@ const SidebarDrawer = ({ isSidebarOpen, sidebarHandler }) => {
       <AnimationSlideUp shouldAnimate={isSidebarOpen} delay={50}>
         <Underline>
           <AniLink
-            to='/work'
-            onClick={pathname === '/work' ? () => sidebarHandler() : null}
+            to="/work"
+            onClick={pathname === "/work" ? () => sidebarHandler() : null}
             activeClassName={sidebarDrawerStyles.active}
             cover
-            direction='up'
-            bg='#BBBBBB'
+            direction="up"
+            bg="#BBBBBB"
           >
             <h1 className={`${sidebarDrawerStyles.headline}`}>Work</h1>
             <div className={`${sidebarDrawerStyles.description}`}>
-              <p>{pathname === '/work' ? 'You are here' : 'My portfolio'}</p>
+              <p>{pathname === "/work" ? "You are here" : "My portfolio"}</p>
             </div>
           </AniLink>
         </Underline>
@@ -57,22 +57,22 @@ const SidebarDrawer = ({ isSidebarOpen, sidebarHandler }) => {
       <AnimationSlideUp shouldAnimate={isSidebarOpen} delay={100}>
         <Underline>
           <AniLink
-            to='/about'
-            onClick={pathname === '/about' ? () => sidebarHandler() : null}
+            to="/about"
+            onClick={pathname === "/about" ? () => sidebarHandler() : null}
             activeClassName={sidebarDrawerStyles.active}
             cover
-            direction='up'
-            bg='#BBBBBB'
+            direction="up"
+            bg="#BBBBBB"
           >
             <h1 className={`${sidebarDrawerStyles.headline}`}>About</h1>
             <div className={`${sidebarDrawerStyles.description}`}>
-              <p>{pathname === '/about' ? 'You are here' : 'Know me better'}</p>
+              <p>{pathname === "/about" ? "You are here" : "Know me better"}</p>
             </div>
           </AniLink>
         </Underline>
       </AnimationSlideUp>
 
-      <AnimationSlideUp shouldAnimate={isSidebarOpen} delay={150}>
+      {/* <AnimationSlideUp shouldAnimate={isSidebarOpen} delay={150}>
         <Underline>
           <AniLink
             to='/blog'
@@ -88,22 +88,22 @@ const SidebarDrawer = ({ isSidebarOpen, sidebarHandler }) => {
             </div>
           </AniLink>
         </Underline>
-      </AnimationSlideUp>
+      </AnimationSlideUp> */}
 
-      <AnimationSlideUp shouldAnimate={isSidebarOpen} delay={200}>
+      <AnimationSlideUp shouldAnimate={isSidebarOpen} delay={150}>
         <Underline>
           <AniLink
-            to='/contact'
-            onClick={pathname === '/contact' ? () => sidebarHandler() : null}
+            to="/contact"
+            onClick={pathname === "/contact" ? () => sidebarHandler() : null}
             activeClassName={sidebarDrawerStyles.active}
             cover
-            direction='up'
-            bg='#BBBBBB'
+            direction="up"
+            bg="#BBBBBB"
           >
             <h1 className={`${sidebarDrawerStyles.headline}`}>Contact</h1>
             <div className={`${sidebarDrawerStyles.description}`}>
               <p>
-                {pathname === '/contact' ? 'You are here' : "Let's connect"}
+                {pathname === "/contact" ? "You are here" : "Let's connect"}
               </p>
             </div>
           </AniLink>
